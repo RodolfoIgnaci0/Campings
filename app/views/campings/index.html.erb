@@ -1,0 +1,9 @@
+<h1>Campings#index</h1>
+
+<% @campgrounds.each do |value| %>
+  <%= value.photo %>
+  <%= value.name %>
+  <%= value.region %>
+  <%= value.direction %>
+  <br>
+<% end %>

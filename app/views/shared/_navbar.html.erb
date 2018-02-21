@@ -1,0 +1,18 @@
+<nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+          <li class="uk-active"><%= link_to 'Home', root_path %></li>
+            <% if user_signed_in? %>
+              <% if current_user.name.present? %>
+                  <li class="uk-active">Bienvenido <%= current_user.name %></li>
+                <% else %>
+                  <li class="uk-active">Bienvenido <%= current_user.email %></li>
+              <% end %>
+              <li class="uk-parent"><%= link_to 'Sign Out', destroy_user_session_path, method:  :delete %></li>
+            <% else %>
+              <li class="uk-parent"><%= link_to 'Sign In', user_session_path %></li>
+              <li class="uk-parent"><%= link_to 'Registration', new_user_registration_path %></li>
+          <% end %>
+        </ul>
+    </div>
+</nav>
