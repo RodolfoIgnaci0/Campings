@@ -4,6 +4,7 @@ class CampingsController < ApplicationController
   end
   def index
     @searching = params[:search]
-    @campgrounds = Campground.search(@searching)
+    searched = Campground.search(@searching)
+    @campgrounds = searched.page(params[:page]).per(5)
   end
 end

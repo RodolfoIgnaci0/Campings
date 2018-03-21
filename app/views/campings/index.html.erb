@@ -8,21 +8,24 @@
 </div>
 
 <hr>
-<span> Campings encontrados por palabra clave: <%= @searching %></span>
+<div class="uk-container">
+  <span> Campings encontrados por palabra clave: <%= @searching %></span>
+  <%= paginate @campgrounds %>
 
-<% @campgrounds.each do |value| %>
-  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-scrollspy="cls:uk-animation-fade" uk-grid>
-    <div class="uk-card-media-left uk-cover-container">
-      <%= image_tag value.photo %>
-      <canvas width="600" height="400"></canvas>
-    </div>
-    <div>
-      <div class="uk-card-body">
-        <h3 class="uk-card-title"><%= value.name %></h3>
-        <p>Region: <%= value.region %></p>
-        <p>Dirección: <%= value.direction %></p>
-        <button class="uk-button uk-button-secondary uk-button-large">Ver Oferta</button>
+  <% @campgrounds.each do |value| %>
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-scrollspy="cls:uk-animation-fade" uk-grid>
+      <div class="uk-card-media-left uk-cover-container">
+        <%= image_tag value.photo %>
+        <canvas width="600" height="400"></canvas>
+      </div>
+      <div>
+        <div class="uk-card-body">
+          <h3 class="uk-card-title"><%= value.name %></h3>
+          <p>Region: <%= value.region %></p>
+          <p>Dirección: <%= value.direction %></p>
+          <button class="uk-button uk-button-secondary uk-button-large">Ver Oferta</button>
+        </div>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

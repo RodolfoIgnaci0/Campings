@@ -6,4 +6,5 @@ class Campground < ApplicationRecord
       Campground.all
     end
   end
+  paginates_per 50
 end
