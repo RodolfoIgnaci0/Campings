@@ -1,9 +1,28 @@
-<h1>Campings#index</h1>
+<hr>
+<div class="uk-text-center">
+  <h3>Some Shit</h3>
+    <%= form_with url: campings_index_path, local: true, class: 'uk-search uk-search-default uk-width-1-3', method: :get do |f| %>
+      <%= f.text_field :search, class:"uk-search-input" %>
+      <%= f.submit "Search", name: nil, class:"uk-button uk-button-secondary" %>
+    <% end %>
+</div>
+
+<hr>
+<span> Campings encontrados por palabra clave: <%= @searching %></span>
 
 <% @campgrounds.each do |value| %>
-  <%= value.photo %>
-  <%= value.name %>
-  <%= value.region %>
-  <%= value.direction %>
-  <br>
+  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-scrollspy="cls:uk-animation-fade" uk-grid>
+    <div class="uk-card-media-left uk-cover-container">
+      <%= image_tag value.photo %>
+      <canvas width="600" height="400"></canvas>
+    </div>
+    <div>
+      <div class="uk-card-body">
+        <h3 class="uk-card-title"><%= value.name %></h3>
+        <p>Region: <%= value.region %></p>
+        <p>Dirección: <%= value.direction %></p>
+        <button class="uk-button uk-button-secondary uk-button-large">Ver Oferta</button>
+      </div>
+    </div>
+  </div>
 <% end %>

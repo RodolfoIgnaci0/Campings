@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 20.times do |x|
-  Campground.create(name: "camping#{x}", direction: "Avenida #{x}, ##{x*138}", region: "#{x}", photo: 1)
+  Campground.create(name: "camping#{x}", direction: "Avenida #{x}, ##{x*138}", region: "#{x}", photo: "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg")
 end

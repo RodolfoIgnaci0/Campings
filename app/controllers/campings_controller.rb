@@ -3,6 +3,7 @@ class CampingsController < ApplicationController
   def landing
   end
   def index
-    @campgrounds = Campground.search(params[:search])
+    @searching = params[:search]
+    @campgrounds = Campground.search(@searching)
   end
 end
