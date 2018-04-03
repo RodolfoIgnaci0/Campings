@@ -1,0 +1,7 @@
+<div class="uk-text-center uk-margin-xlarge">
+  <h1>Some Shit</h1>
+    <%= form_with url: campgrounds_path, local: true, class: 'uk-search uk-search-default uk-width-1-2', method: :get do |f| %>
+      <%= f.text_field :search, class:"uk-search-input" %>
+      <%= f.submit "Search", name: nil, class:"uk-button uk-button-secondary" %>
+    <% end %>
+</div>

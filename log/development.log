@@ -1,0 +1,1754 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20180111003250)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180111003250"]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddParamsToUser (20180111014822)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "last_name" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "phone" integer[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180111014822"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCampgrounds (20180214014020)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "campgrounds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "direction" varchar, "region" varchar, "photo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180214014020"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-03-22 02:58:56.588893"], ["updated_at", "2018-03-22 02:58:56.588893"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping0"], ["direction", "Avenida 0, #0"], ["region", "0"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:03.989339"], ["updated_at", "2018-03-22 02:59:03.989339"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping1"], ["direction", "Avenida 1, #138"], ["region", "1"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:03.994811"], ["updated_at", "2018-03-22 02:59:03.994811"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping2"], ["direction", "Avenida 2, #276"], ["region", "2"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:03.998729"], ["updated_at", "2018-03-22 02:59:03.998729"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping3"], ["direction", "Avenida 3, #414"], ["region", "3"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.002438"], ["updated_at", "2018-03-22 02:59:04.002438"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping4"], ["direction", "Avenida 4, #552"], ["region", "4"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.006520"], ["updated_at", "2018-03-22 02:59:04.006520"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping5"], ["direction", "Avenida 5, #690"], ["region", "5"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.009932"], ["updated_at", "2018-03-22 02:59:04.009932"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping6"], ["direction", "Avenida 6, #828"], ["region", "6"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.013369"], ["updated_at", "2018-03-22 02:59:04.013369"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping7"], ["direction", "Avenida 7, #966"], ["region", "7"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.019006"], ["updated_at", "2018-03-22 02:59:04.019006"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping8"], ["direction", "Avenida 8, #1104"], ["region", "8"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.022416"], ["updated_at", "2018-03-22 02:59:04.022416"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping9"], ["direction", "Avenida 9, #1242"], ["region", "9"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.025463"], ["updated_at", "2018-03-22 02:59:04.025463"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping10"], ["direction", "Avenida 10, #1380"], ["region", "10"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.028219"], ["updated_at", "2018-03-22 02:59:04.028219"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping11"], ["direction", "Avenida 11, #1518"], ["region", "11"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.031048"], ["updated_at", "2018-03-22 02:59:04.031048"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping12"], ["direction", "Avenida 12, #1656"], ["region", "12"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.033850"], ["updated_at", "2018-03-22 02:59:04.033850"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping13"], ["direction", "Avenida 13, #1794"], ["region", "13"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.036993"], ["updated_at", "2018-03-22 02:59:04.036993"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping14"], ["direction", "Avenida 14, #1932"], ["region", "14"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.040102"], ["updated_at", "2018-03-22 02:59:04.040102"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping15"], ["direction", "Avenida 15, #2070"], ["region", "15"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.042926"], ["updated_at", "2018-03-22 02:59:04.042926"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping16"], ["direction", "Avenida 16, #2208"], ["region", "16"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.045608"], ["updated_at", "2018-03-22 02:59:04.045608"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping17"], ["direction", "Avenida 17, #2346"], ["region", "17"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.048475"], ["updated_at", "2018-03-22 02:59:04.048475"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping18"], ["direction", "Avenida 18, #2484"], ["region", "18"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.051526"], ["updated_at", "2018-03-22 02:59:04.051526"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "camping19"], ["direction", "Avenida 19, #2622"], ["region", "19"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-03-22 02:59:04.054676"], ["updated_at", "2018-03-22 02:59:04.054676"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-03-21 23:59:15 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CampingsController#landing as HTML
+  Rendering campings/landing.html.erb within layouts/application
+  Rendered campings/landing.html.erb within layouts/application (7.7ms)
+  Rendered shared/_navbar.html.erb (7.9ms)
+Completed 200 OK in 608ms (Views: 591.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campings?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-03-21 23:59:19 -0300
+Processing by CampingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campings/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campings/index.html.erb within layouts/application (79.6ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 122ms (Views: 112.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/campings/1" for 127.0.0.1 at 2018-03-21 23:59:22 -0300
+Processing by CampingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.7ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campings/show.html.erb within layouts/application
+  Rendered campings/show.html.erb within layouts/application (1.2ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 49ms (Views: 37.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-21 23:59:34 -0300
+Processing by CampingsController#landing as HTML
+  Rendering campings/landing.html.erb within layouts/application
+  Rendered campings/landing.html.erb within layouts/application (1.1ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 60ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campings?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-03-21 23:59:36 -0300
+Processing by CampingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campings/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.6ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campings/index.html.erb within layouts/application (48.2ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 83ms (Views: 79.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 20:51:32 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (13.2ms)
+  Rendered shared/_navbar.html.erb (9.6ms)
+Completed 200 OK in 315ms (Views: 297.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-03-22 20:51:34 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (94.2ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 131ms (Views: 118.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 20:51:37 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.5ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (1.0ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 47ms (Views: 34.8ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20180322235916)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "opinion" text, "campground_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_770577d41b"
+FOREIGN KEY ("campground_id")
+  REFERENCES "campgrounds" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_posts_on_campground_id" ON "posts" ("campground_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180322235916"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_campground_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_campground_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" ORDER BY "campgrounds"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."campground_id" = ? LIMIT ?[0m  [["campground_id", 1], ["LIMIT", 11]]
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 21:06:15 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (1.0ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 52ms (Views: 31.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 21:40:05 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.3ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 47ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-03-22 21:40:08 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (50.4ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 84ms (Views: 79.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 21:40:13 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (0.8ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 40ms (Views: 32.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 21:40:51 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.4ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-03-22 21:40:55 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (43.5ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 75ms (Views: 70.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 21:40:58 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (0.8ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 35ms (Views: 31.1ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20180322235916)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "posts"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180322235916"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20180322235916)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "opinion" text, "campground_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_770577d41b"
+FOREIGN KEY ("campground_id")
+  REFERENCES "campgrounds" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_posts_on_campground_id" ON "posts" ("campground_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180322235916"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_campground_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_campground_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20180322235916)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "posts"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180322235916"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20180323004910)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "opinion" text, "campground_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_770577d41b"
+FOREIGN KEY ("campground_id")
+  REFERENCES "campgrounds" ("id")
+, CONSTRAINT "fk_rails_5b5ddfd518"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_posts_on_campground_id" ON "posts" ("campground_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_campground_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_campground_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_posts_on_user_id" ON "posts" ("user_id")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180323004910"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_campground_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_campground_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2018-03-22 21:55:57 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.4ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 60ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-03-22 21:55:58 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 21:55:58 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/index.html.erb within layouts/application
+  Rendering campgrounds/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  Rendered campgrounds/show.html.erb within layouts/application (0.9ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 93ms (Views: 59.3ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (81.7ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 149ms (Views: 134.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 22:02:01 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (6.2ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 138ms (Views: 119.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 22:03:25 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.3ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 48ms (Views: 44.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 22:06:05 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.9ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 39ms (Views: 35.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 22:10:46 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (1.8ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 22:11:19 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (1.9ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 22:11:36 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.5ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 53ms (Views: 49.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 22:11:46 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.1ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 22:11:57 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.7ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 39ms (Views: 35.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 22:12:27 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/show.html.erb:14: syntax error, unexpected tLABEL, expecting '='
+ffer.append=( f.submit, class: "uk-button uk-button-secondar
+                              ^):
+  
+app/views/campgrounds/show.html.erb:14: syntax error, unexpected tLABEL, expecting '='
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 22:13:09 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.5ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 43ms (Views: 39.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 22:13:32 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.1ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 39ms (Views: 35.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-22 22:17:35 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (11.8ms)
+  Rendered shared/_navbar.html.erb (6.2ms)
+Completed 200 OK in 338ms (Views: 320.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-03-22 22:17:39 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (94.1ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 138ms (Views: 128.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 22:18:58 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (4.5ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 58ms (Views: 50.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-03-22 22:19:03 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (47.0ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 86ms (Views: 81.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-03-22 22:19:05 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-03-22 22:19:05 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.2ms)
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 81ms (Views: 73.7ms | ActiveRecord: 0.6ms)
+
+
+  Rendered campgrounds/index.html.erb within layouts/application (86.2ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 132ms (Views: 127.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-03-22 22:19:17 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (43.1ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 83ms (Views: 78.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/campgrounds?page=4&search=" for 127.0.0.1 at 2018-03-22 22:20:45 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"page"=>"4", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 15]]
+  Rendered campgrounds/index.html.erb within layouts/application (58.6ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 94ms (Views: 89.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/campgrounds?page=4&search=" for 127.0.0.1 at 2018-03-22 22:21:25 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"page"=>"4", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 15]]
+  Rendered campgrounds/index.html.erb within layouts/application (48.3ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 85ms (Views: 80.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-02 20:56:05 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (14.9ms)
+  Rendered shared/_navbar.html.erb (6.5ms)
+Completed 200 OK in 359ms (Views: 338.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-02 20:56:09 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-04-02 20:56:09 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (38.2ms)
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (125.2ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 158ms (Views: 121.6ms | ActiveRecord: 2.0ms)
+
+
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 201ms (Views: 187.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-04-02 20:56:19 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.6ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (1.9ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 58ms (Views: 52.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/campgrounds/1" for 127.0.0.1 at 2018-04-02 20:56:24 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/campgrounds/1"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/campgrounds/1" for 127.0.0.1 at 2018-04-02 20:56:28 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/campgrounds/1"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-04-02 21:04:19 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.4ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 55ms (Views: 48.6ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-02 21:04:21 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (59.3ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 101ms (Views: 91.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-04-02 21:05:19 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (3.5ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 84ms (Views: 78.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-04-02 21:08:33 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.1ms)
+  Rendered shared/_navbar.html.erb (3.1ms)
+Completed 200 OK in 54ms (Views: 50.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-04-02 21:13:02 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.5ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 62ms (Views: 57.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-04-02 21:14:21 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.0ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-04-02 21:16:07 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (1.9ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-04-02 21:16:56 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (1.9ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 42ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-04-02 21:17:07 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.1ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 39ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPhotosToCampground (20180403001835)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "campgrounds" ADD "photo1" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "campgrounds" ADD "photo2" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "campgrounds" ADD "photo3" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "campgrounds" ADD "photo4" varchar[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180403001835"]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_campground_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_campground_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 1]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 6]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 7]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 9]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 10]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 11]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 12]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 13]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 14]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 15]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.9ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 16]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 17]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 18]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 19]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 20]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping0"], ["direction", "Avenida 0, #0"], ["region", "0"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.785463"], ["updated_at", "2018-04-03 00:23:51.785463"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping1"], ["direction", "Avenida 1, #138"], ["region", "1"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.796544"], ["updated_at", "2018-04-03 00:23:51.796544"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (18.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping2"], ["direction", "Avenida 2, #276"], ["region", "2"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.819368"], ["updated_at", "2018-04-03 00:23:51.819368"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping3"], ["direction", "Avenida 3, #414"], ["region", "3"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.825504"], ["updated_at", "2018-04-03 00:23:51.825504"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping4"], ["direction", "Avenida 4, #552"], ["region", "4"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.829411"], ["updated_at", "2018-04-03 00:23:51.829411"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping5"], ["direction", "Avenida 5, #690"], ["region", "5"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.834829"], ["updated_at", "2018-04-03 00:23:51.834829"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping6"], ["direction", "Avenida 6, #828"], ["region", "6"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.841206"], ["updated_at", "2018-04-03 00:23:51.841206"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping7"], ["direction", "Avenida 7, #966"], ["region", "7"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.847309"], ["updated_at", "2018-04-03 00:23:51.847309"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping8"], ["direction", "Avenida 8, #1104"], ["region", "8"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.855248"], ["updated_at", "2018-04-03 00:23:51.855248"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping9"], ["direction", "Avenida 9, #1242"], ["region", "9"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.862890"], ["updated_at", "2018-04-03 00:23:51.862890"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping10"], ["direction", "Avenida 10, #1380"], ["region", "10"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.869150"], ["updated_at", "2018-04-03 00:23:51.869150"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping11"], ["direction", "Avenida 11, #1518"], ["region", "11"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.875255"], ["updated_at", "2018-04-03 00:23:51.875255"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping12"], ["direction", "Avenida 12, #1656"], ["region", "12"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.880594"], ["updated_at", "2018-04-03 00:23:51.880594"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping13"], ["direction", "Avenida 13, #1794"], ["region", "13"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.885300"], ["updated_at", "2018-04-03 00:23:51.885300"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping14"], ["direction", "Avenida 14, #1932"], ["region", "14"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.891059"], ["updated_at", "2018-04-03 00:23:51.891059"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping15"], ["direction", "Avenida 15, #2070"], ["region", "15"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.895504"], ["updated_at", "2018-04-03 00:23:51.895504"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping16"], ["direction", "Avenida 16, #2208"], ["region", "16"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.901629"], ["updated_at", "2018-04-03 00:23:51.901629"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping17"], ["direction", "Avenida 17, #2346"], ["region", "17"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.914138"], ["updated_at", "2018-04-03 00:23:51.914138"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping18"], ["direction", "Avenida 18, #2484"], ["region", "18"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.922366"], ["updated_at", "2018-04-03 00:23:51.922366"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "camping19"], ["direction", "Avenida 19, #2622"], ["region", "19"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-03 00:23:51.929958"], ["updated_at", "2018-04-03 00:23:51.929958"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-04-02 21:25:37 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 11ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=1):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/" for 127.0.0.1 at 2018-04-02 21:25:52 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.3ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 65ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-02 21:25:54 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (64.9ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 102ms (Views: 97.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 21:26:02 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCampground Load (1.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (4.6ms)
+  Rendered shared/_navbar.html.erb (2.3ms)
+Completed 200 OK in 55ms (Views: 48.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 21:26:55 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.3ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 47ms (Views: 41.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 21:27:34 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 52ms (Views: 48.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 21:32:54 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.8ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 41ms (Views: 36.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 21:33:01 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.3ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 39ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 21:35:35 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.4ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 39ms (Views: 35.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds/small_1.jpg" for 127.0.0.1 at 2018-04-02 21:35:35 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_1"}
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 21:35:35 -0300
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_1):
+Processing by CampgroundsController#show as JPEG
+  
+  Parameters: {"id"=>"small_2"}
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/big_1.jpg" for 127.0.0.1 at 2018-04-02 21:35:39 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"big_1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/big_2.jpg" for 127.0.0.1 at 2018-04-02 21:35:39 -0300
+  
+Processing by CampgroundsController#show as JPEG
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=big_1):
+  Parameters: {"id"=>"big_2"}
+  
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=big_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/small_1.jpg" for 127.0.0.1 at 2018-04-02 21:35:44 -0300
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 21:35:44 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_1"}
+Processing by CampgroundsController#show as JPEG
+  [1m[36mCampground Load (0.5ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  Parameters: {"id"=>"small_2"}
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_1):
+  
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 21:37:01 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.2ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 64ms (Views: 60.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/small_1.jpg" for 127.0.0.1 at 2018-04-02 21:37:01 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_1"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 21:37:01 -0300
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_1):
+  
+Processing by CampgroundsController#show as JPEG
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/big_2.jpg" for 127.0.0.1 at 2018-04-02 21:37:05 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"big_2"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=big_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 21:37:43 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+Started GET "/campgrounds/small_1.jpg" for 127.0.0.1 at 2018-04-02 21:37:43 -0300
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 21:37:43 -0300
+Processing by CampgroundsController#show as JPEG
+Processing by CampgroundsController#show as JPEG
+Started GET "/campgrounds/big_2.jpg" for 127.0.0.1 at 2018-04-02 21:37:43 -0300
+  Parameters: {"id"=>"small_1"}
+  Rendering campgrounds/show.html.erb within layouts/application
+  Parameters: {"id"=>"small_2"}
+Processing by CampgroundsController#show as JPEG
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  Rendered campgrounds/show.html.erb within layouts/application (2.5ms)
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  Parameters: {"id"=>"big_2"}
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms)
+
+
+Completed 404 Not Found in 5ms (ActiveRecord: 0.7ms)
+
+
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  
+  
+Completed 404 Not Found in 7ms (ActiveRecord: 0.5ms)
+
+
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_1):
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+  
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=big_2):
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 217ms (Views: 211.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 21:37:43 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 21:38:00 -0300
+Processing by CampgroundsController#show as HTML
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 21:38:00 -0300
+  Parameters: {"id"=>"21"}
+Started GET "/campgrounds/big_2.jpg" for 127.0.0.1 at 2018-04-02 21:38:00 -0300
+Processing by CampgroundsController#show as JPEG
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  Parameters: {"id"=>"big_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 12ms (ActiveRecord: 0.2ms)
+
+
+  Rendered campgrounds/show.html.erb within layouts/application (2.5ms)
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=big_2):
+  
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.3ms)
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Completed 200 OK in 89ms (Views: 83.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 21:38:01 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 21:38:08 -0300
+Processing by CampgroundsController#show as HTML
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 21:38:08 -0300
+  Parameters: {"id"=>"21"}
+Processing by CampgroundsController#show as JPEG
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 10ms (ActiveRecord: 0.2ms)
+
+
+  Rendering campgrounds/show.html.erb within layouts/application
+  
+  Rendered campgrounds/show.html.erb within layouts/application (2.4ms)
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 107ms (Views: 102.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 21:38:08 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 21:39:51 -0300
+Processing by CampgroundsController#show as HTML
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 21:39:51 -0300
+  Parameters: {"id"=>"21"}
+Processing by CampgroundsController#show as JPEG
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 12ms (ActiveRecord: 0.2ms)
+
+
+  Rendering campgrounds/show.html.erb within layouts/application
+  
+  Rendered campgrounds/show.html.erb within layouts/application (3.3ms)
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 92ms (Views: 86.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 21:39:51 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (1.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 21:40:19 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"21"}
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 21:40:19 -0300
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  Rendering campgrounds/show.html.erb within layouts/application
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  Rendered campgrounds/show.html.erb within layouts/application (3.3ms)
+Completed 404 Not Found in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 106ms (Views: 100.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 21:40:19 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 21:40:33 -0300
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 21:40:33 -0300
+Processing by CampgroundsController#show as HTML
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"21"}
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+  Rendering campgrounds/show.html.erb within layouts/application
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  Rendered campgrounds/show.html.erb within layouts/application (4.5ms)
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 137ms (Views: 130.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 21:40:33 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:02:18 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.3ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 51ms (Views: 47.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:02:18 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/big_2.jpg" for 127.0.0.1 at 2018-04-02 22:02:22 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"big_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=big_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:02:52 -0300
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:02:52 -0300
+Processing by CampgroundsController#show as HTML
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"21"}
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms)
+
+
+  Rendering campgrounds/show.html.erb within layouts/application
+  
+  Rendered campgrounds/show.html.erb within layouts/application (3.2ms)
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 102ms (Views: 97.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:02:52 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 51ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/big_2.jpg" for 127.0.0.1 at 2018-04-02 22:02:56 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"big_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=big_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:03:26 -0300
+Processing by CampgroundsController#show as HTML
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:03:26 -0300
+  Parameters: {"id"=>"21"}
+Started GET "/campgrounds/big_2.jpg" for 127.0.0.1 at 2018-04-02 22:03:26 -0300
+Processing by CampgroundsController#show as JPEG
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  Parameters: {"id"=>"big_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 12ms (ActiveRecord: 0.2ms)
+
+
+  Rendering campgrounds/show.html.erb within layouts/application
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+  Rendered campgrounds/show.html.erb within layouts/application (2.9ms)
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=big_2):
+  
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 148ms (Views: 142.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:03:26 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:04:21 -0300
+Processing by CampgroundsController#show as HTML
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:04:21 -0300
+  Parameters: {"id"=>"21"}
+Processing by CampgroundsController#show as JPEG
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 11ms (ActiveRecord: 0.2ms)
+
+
+  Rendering campgrounds/show.html.erb within layouts/application
+  
+  Rendered campgrounds/show.html.erb within layouts/application (3.1ms)
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 93ms (Views: 88.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:04:21 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 49ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:08:11 -0300
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:08:11 -0300
+Processing by CampgroundsController#show as HTML
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"21"}
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  Rendering campgrounds/show.html.erb within layouts/application
+  
+  Rendered campgrounds/show.html.erb within layouts/application (3.1ms)
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 103ms (Views: 98.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:08:11 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:08:29 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"21"}
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:08:29 -0300
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  Rendered campgrounds/show.html.erb within layouts/application (2.4ms)
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 93ms (Views: 87.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:08:29 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:09:45 -0300
+Processing by CampgroundsController#show as HTML
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:09:45 -0300
+  Parameters: {"id"=>"21"}
+Processing by CampgroundsController#show as JPEG
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+Completed 404 Not Found in 13ms (ActiveRecord: 0.3ms)
+
+
+  Rendered campgrounds/show.html.erb within layouts/application (2.5ms)
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 113ms (Views: 107.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:09:45 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/big_2.jpg" for 127.0.0.1 at 2018-04-02 22:09:47 -0300
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"big_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=big_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:10:24 -0300
+Processing by CampgroundsController#show as HTML
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:10:24 -0300
+  Parameters: {"id"=>"21"}
+Processing by CampgroundsController#show as JPEG
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 14ms (ActiveRecord: 0.2ms)
+
+
+  Rendering campgrounds/show.html.erb within layouts/application
+  
+  Rendered campgrounds/show.html.erb within layouts/application (3.1ms)
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 99ms (Views: 91.9ms | ActiveRecord: 0.4ms)
+
+

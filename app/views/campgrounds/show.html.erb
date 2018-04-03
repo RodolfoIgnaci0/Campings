@@ -1,0 +1,35 @@
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+
+<div class="uk-child-width-expand@s" uk-grid>
+     <div class="uk-card uk-card-default uk-card-body">
+       <h2><%= @campground.name %></h2>
+       <%= image_tag @campground.photo %>
+       <%= @campground.direction %> <br>
+       <%= @campground.region %> <br>
+       <%= time_ago_in_words(@campground.created_at) %>
+     </div>
+     <div class="uk-grid-item-match">
+       <div class="uk-card uk-card-default uk-card-body">
+         <a data-fancybox="gallery" href="<%= image_url @campground.photo1 %>"><img src="<%= image_url @campground.photo1 %>"></a>
+         <a data-fancybox="gallery" href="<%= image_url @campground.photo2 %>"><img src="<%= image_url @campground.photo2 %>"></a>
+         <a data-fancybox="gallery" href="<%= image_url @campground.photo3 %>"><img src="<%= image_url @campground.photo3 %>"></a>
+         <a data-fancybox="gallery" href="<%= image_url @campground.photo4 %>"><img src="<%= image_url @campground.photo4 %>"></a>
+       </div>
+     </div>
+</div>
+
+<!-- <div class="uk-container">
+  <%= form_with do |f| %>
+  <legend class="uk-legend">Comparte tu experiencia</legend>
+  <div class="uk-margin">
+    <%= f.text_area :opinion, class: "uk-textarea", placeholder:"Comparte tu opinión", rows:5 %>
+  </div>
+  <%= f.submit class: "uk-button uk-button-secondary uk-button-large" %>
+  <% end %>
+</div>
+
+<h1>crear y mostrar comentarios del camping</h1>
+<h1>intentar comentarios con infinite scrolling</h1> -->
