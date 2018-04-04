@@ -12,9 +12,19 @@ class CampgroundsController < ApplicationController
   def show
 
   end
+  def new
+    @campground = Campground.new
+  end
+  def create
+    Campground.create!(campground_params)
+    redirect_to root_path
+  end
 
   private
   def set_campground
     @campground = Campground.find(params[:id])
+  end
+  def campground_params
+    params.require(:campground).permit(:name, :direction, :region, :photo, :photo1, :photo2, :photo3, :photo4)
   end
 end

@@ -12,6 +12,16 @@
             <% else %>
               <li class="uk-parent"><%= link_to 'Sign In', user_session_path %></li>
               <li class="uk-parent"><%= link_to 'Registration', new_user_registration_path %></li>
+              <li class="uk-parent">
+                <a href="#">Options</a>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li class="uk-active"><%= link_to 'Create Campground', new_campground_path %></li>
+                    <li><%= link_to 'Edit Campground', '#' %></li>
+                    <li><%= link_to 'Disable Campground', '#' %></li>
+                  </ul>
+                </div>
+              </li>
           <% end %>
         </ul>
     </div>

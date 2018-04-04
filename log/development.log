@@ -1752,3 +1752,1458 @@ app/controllers/campgrounds_controller.rb:18:in `set_campground'
 Completed 200 OK in 99ms (Views: 91.9ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:12:43 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"21"}
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:12:43 -0300
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  Rendered campgrounds/show.html.erb within layouts/application (2.5ms)
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (3.3ms)
+Completed 200 OK in 133ms (Views: 127.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-02 22:13:28 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.3ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-02 22:13:30 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (51.1ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+Completed 200 OK in 97ms (Views: 92.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:13:33 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (2.6ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 43ms (Views: 36.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/campgrounds/22" for 127.0.0.1 at 2018-04-02 22:13:37 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (3.9ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 56ms (Views: 48.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds/22" for 127.0.0.1 at 2018-04-02 22:14:14 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (3.2ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 50ms (Views: 46.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/22" for 127.0.0.1 at 2018-04-02 22:14:39 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (2.4ms)
+Completed 200 OK in 44ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/22" for 127.0.0.1 at 2018-04-02 22:15:10 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (4.1ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 41ms (Views: 37.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-02 22:18:53 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.6ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 40ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-02 22:18:55 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (51.1ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 96ms (Views: 90.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:18:57 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mCampground Load (0.5ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (6.3ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+Completed 200 OK in 68ms (Views: 63.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:19:43 -0300
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:19:43 -0300
+Processing by CampgroundsController#show as HTML
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"21"}
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  Rendering campgrounds/show.html.erb within layouts/application
+  
+  Rendered campgrounds/show.html.erb within layouts/application (3.0ms)
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 92ms (Views: 88.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:19:55 -0300
+Processing by CampgroundsController#show as HTML
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:19:55 -0300
+  Parameters: {"id"=>"21"}
+Processing by CampgroundsController#show as JPEG
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 13ms (ActiveRecord: 0.2ms)
+
+
+  Rendering campgrounds/show.html.erb within layouts/application
+  
+  Rendered campgrounds/show.html.erb within layouts/application (3.7ms)
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 93ms (Views: 87.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:20:33 -0300
+Processing by CampgroundsController#show as HTML
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:20:33 -0300
+  Parameters: {"id"=>"21"}
+Processing by CampgroundsController#show as JPEG
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+Completed 404 Not Found in 11ms (ActiveRecord: 0.3ms)
+
+
+  Rendered campgrounds/show.html.erb within layouts/application (3.7ms)
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 95ms (Views: 90.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:20:55 -0300
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:20:55 -0300
+Processing by CampgroundsController#show as HTML
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"21"}
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 15ms (ActiveRecord: 0.2ms)
+
+
+  Rendering campgrounds/show.html.erb within layouts/application
+  
+  Rendered campgrounds/show.html.erb within layouts/application (2.9ms)
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 85ms (Views: 79.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:21:27 -0300
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:21:27 -0300
+Processing by CampgroundsController#show as HTML
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"21"}
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 15ms (ActiveRecord: 0.2ms)
+
+
+  Rendering campgrounds/show.html.erb within layouts/application
+  
+  Rendered campgrounds/show.html.erb within layouts/application (3.2ms)
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (1.9ms)
+Completed 200 OK in 94ms (Views: 89.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/21" for 127.0.0.1 at 2018-04-02 22:22:01 -0300
+Started GET "/campgrounds/small_2.jpg" for 127.0.0.1 at 2018-04-02 22:22:01 -0300
+Processing by CampgroundsController#show as HTML
+Processing by CampgroundsController#show as JPEG
+  Parameters: {"id"=>"21"}
+  Parameters: {"id"=>"small_2"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=small_2):
+  Rendering campgrounds/show.html.erb within layouts/application
+  
+  Rendered campgrounds/show.html.erb within layouts/application (3.0ms)
+app/controllers/campgrounds_controller.rb:18:in `set_campground'
+  Rendered shared/_navbar.html.erb (8.3ms)
+Completed 200 OK in 95ms (Views: 90.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-03 21:09:49 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (14.2ms)
+  Rendered shared/_navbar.html.erb (9.6ms)
+Completed 200 OK in 359ms (Views: 339.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-03 21:09:53 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (95.7ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 136ms (Views: 122.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-03 21:11:07 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (57.7ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 102ms (Views: 89.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-03 21:11:09 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.2ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 36ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-03 21:11:10 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (43.8ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 81ms (Views: 77.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-03 21:13:40 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (68.1ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 115ms (Views: 102.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/campgrounds" for 127.0.0.1 at 2018-04-03 21:13:42 -0300
+Processing by CampgroundsController#index as HTML
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds"[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (43.3ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+Completed 200 OK in 85ms (Views: 79.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/campgrounds" for 127.0.0.1 at 2018-04-03 21:13:44 -0300
+Processing by CampgroundsController#index as HTML
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds"[0m
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (43.9ms)
+  Rendered shared/_navbar.html.erb (2.3ms)
+Completed 200 OK in 87ms (Views: 82.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/campgrounds" for 127.0.0.1 at 2018-04-03 21:13:45 -0300
+Processing by CampgroundsController#index as HTML
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds"[0m
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (49.5ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 89ms (Views: 85.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/campgrounds" for 127.0.0.1 at 2018-04-03 21:13:56 -0300
+Processing by CampgroundsController#index as HTML
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds"[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (53.4ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+Completed 200 OK in 95ms (Views: 91.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:13:58 -0300
+Processing by CampgroundsController#new as HTML
+Completed 406 Not Acceptable in 408ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (CampgroundsController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:14:17 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (0.5ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 51ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:15:24 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:4: syntax error, unexpected keyword_end
+ze;@output_buffer.append=( end );
+                              ^
+/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/campgrounds/new.html.erb:4: syntax error, unexpected keyword_end
+app/views/campgrounds/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/campgrounds/new.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:15:36 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:2: syntax error, unexpected keyword_do_block
+_with model:@campground |f| do @output_buffer.safe_append='
+                              ^
+/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:4: syntax error, unexpected keyword_end
+ze;@output_buffer.append=( end );
+                              ^
+/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/campgrounds/new.html.erb:2: syntax error, unexpected keyword_do_block
+app/views/campgrounds/new.html.erb:4: syntax error, unexpected keyword_end
+app/views/campgrounds/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/campgrounds/new.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:16:21 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:4: syntax error, unexpected keyword_end
+ze;@output_buffer.append=( end );
+                              ^
+/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/campgrounds/new.html.erb:4: syntax error, unexpected keyword_end
+app/views/campgrounds/new.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/campgrounds/new.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:16:28 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (2.1ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 37ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:16:48 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (1.7ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:17:18 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (5.8ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 42ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:18:05 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (2.3ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:18:32 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (2.2ms)
+  Rendered shared/_navbar.html.erb (8.7ms)
+Completed 200 OK in 47ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:19:31 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (5.5ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:20:39 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.1ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 44ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:21:42 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (6.8ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 66ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:22:30 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (7.2ms)
+  Rendered shared/_navbar.html.erb (2.4ms)
+Completed 200 OK in 61ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:23:10 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (9.8ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 76ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:23:36 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.2ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:24:25 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (5.3ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:25:27 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:14: syntax error, unexpected '<', expecting ')'
+      <%= f.text_field :direction, cl
+       ^
+/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:45: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/campgrounds/new.html.erb:14: syntax error, unexpected '<', expecting ')'
+app/views/campgrounds/new.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+app/views/campgrounds/new.html.erb:43: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/campgrounds/new.html.erb:45: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:25:55 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.2ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:26:49 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.2ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:29:18 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (5.2ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 51ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:31:08 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:6: syntax error, unexpected ')'
+pend=( f.label :name, class: );@output_buffer.safe_append='
+                              ^
+/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:45: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:47: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/campgrounds/new.html.erb:6: syntax error, unexpected ')'
+app/views/campgrounds/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+app/views/campgrounds/new.html.erb:45: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/campgrounds/new.html.erb:47: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:31:16 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (3.8ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 41ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:31:58 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.4ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:32:11 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (6.3ms)
+  Rendered shared/_navbar.html.erb (3.5ms)
+Completed 200 OK in 61ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:33:52 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (5.8ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 52ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:34:06 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (6.6ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 45ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:34:13 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.0ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:34:20 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.0ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:34:46 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.4ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:35:00 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/rodolfoperezgaete/Desktop/Campings/app/views/campgrounds/new.html.erb:38: syntax error, unexpected tLABEL, expecting '='
+ffer.append=( f.submit, class:"" );@output_buffer.safe_appen
+                              ^):
+  
+app/views/campgrounds/new.html.erb:38: syntax error, unexpected tLABEL, expecting '='
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:35:17 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.0ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 39ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:36:03 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.9ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:36:10 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.6ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-03 21:36:13 -0300
+Processing by CampgroundsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YRFmuG777/fDsq8XZpMrPS0D3yqE4fjAfSpv1AF5iAsCggGm5JWUVdPDC25DMbiuBe+7m0C739Bc0LXFQQCJCw==", "campground"=>{"name"=>"", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground"}
+No template found for CampgroundsController#create, rendering head :no_content
+Completed 204 No Content in 382ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:38:28 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (12.7ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 68ms (Views: 45.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:38:32 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (3.8ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 43ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:38:43 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.4ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 41ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:43:08 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.8ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 74ms (Views: 48.4ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-03 21:43:11 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/GjcRB/ej1Ec2rKRRfK9p6ez/3e3MqlKKVQzwHxLGa6f+7talbD08wyrFuhgUC40j1+bxnNojloIrunRPDIYrg==", "campground"=>{"name"=>"", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground"}
+Unpermitted parameters: :direction, :photo1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "region", "photo", "created_at", "updated_at", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", ""], ["region", ""], ["photo", ""], ["created_at", "2018-04-04 00:43:11.338374"], ["updated_at", "2018-04-04 00:43:11.338374"], ["photo2", ""], ["photo3", ""], ["photo4", ""]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/campgrounds/id
+Completed 200 OK in 10ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/campgrounds/id" for 127.0.0.1 at 2018-04-03 21:43:11 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=id):
+  
+app/controllers/campgrounds_controller.rb:25:in `set_campground'
+Started GET "/campgrounds/id" for 127.0.0.1 at 2018-04-03 21:43:55 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 16ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=id):
+  
+app/controllers/campgrounds_controller.rb:25:in `set_campground'
+Started GET "/" for 127.0.0.1 at 2018-04-03 21:43:56 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.2ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 53ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:43:58 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (5.3ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 56ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-03 21:44:09 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zzk0Jw0Mfqxtr4OhdsCFzHyMuKWOJycGhcMgeB4ltHs9aeGS2uBSCQWQjv6aGPh4SZRccZWijiu8QVLnUzhg/Q==", "campground"=>{"name"=>"hola", "region"=>"1", "direction"=>"2", "photo"=>"3", "photo1"=>"4", "photo2"=>"4", "photo3"=>"4", "photo4"=>"4"}, "commit"=>"Create Campground"}
+Unpermitted parameters: :direction, :photo1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "region", "photo", "created_at", "updated_at", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "hola"], ["region", "1"], ["photo", "3"], ["created_at", "2018-04-04 00:44:09.557320"], ["updated_at", "2018-04-04 00:44:09.557320"], ["photo2", "4"], ["photo3", "4"], ["photo4", "4"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-03 21:44:09 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.3ms)
+  Rendered shared/_navbar.html.erb (2.4ms)
+Completed 200 OK in 61ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-03 21:44:12 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (59.6ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 97ms (Views: 92.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/campgrounds?page=5&search=" for 127.0.0.1 at 2018-04-03 21:44:14 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"page"=>"5", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 20]]
+  Rendered campgrounds/index.html.erb within layouts/application (41.3ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (The asset "3" is not present in the asset pipeline.):
+    15:   <% @campgrounds.each do |value| %>
+    16:     <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-scrollspy="cls:uk-animation-fade" uk-grid>
+    17:       <div class="uk-card-media-left uk-cover-container">
+    18:         <%= image_tag value.photo %>
+    19:         <canvas width="600" height="400"></canvas>
+    20:       </div>
+    21:       <div>
+  
+app/views/campgrounds/index.html.erb:18:in `block in _app_views_campgrounds_index_html_erb__4450513448095295417_70237296920060'
+app/views/campgrounds/index.html.erb:15:in `_app_views_campgrounds_index_html_erb__4450513448095295417_70237296920060'
+  [1m[36mCampground Load (0.5ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" ORDER BY "campgrounds"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 42]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/campgrounds?page=5&search=" for 127.0.0.1 at 2018-04-03 21:44:53 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"page"=>"5", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 20]]
+  Rendered campgrounds/index.html.erb within layouts/application (52.5ms)
+  Rendered shared/_navbar.html.erb (8.4ms)
+Completed 200 OK in 105ms (Views: 99.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/campgrounds?page=4&search=" for 127.0.0.1 at 2018-04-03 21:44:59 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"page"=>"4", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 15]]
+  Rendered campgrounds/index.html.erb within layouts/application (63.7ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 105ms (Views: 100.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/campgrounds?page=5&search=" for 127.0.0.1 at 2018-04-03 21:45:01 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"page"=>"5", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 20]]
+  Rendered campgrounds/index.html.erb within layouts/application (56.5ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 98ms (Views: 92.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-03 21:45:06 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (52.1ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 90ms (Views: 86.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-03 21:45:09 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (49.9ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 89ms (Views: 86.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/campgrounds?page=5&search=" for 127.0.0.1 at 2018-04-03 21:45:10 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"page"=>"5", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 20]]
+  Rendered campgrounds/index.html.erb within layouts/application (50.7ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 88ms (Views: 82.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/campgrounds/41" for 127.0.0.1 at 2018-04-03 21:45:12 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mCampground Load (0.6ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    21:     </div>
+    22:     <div class="uk-grid-item-match">
+    23:       <div class="uk-card uk-card-default uk-card-body">
+    24:         <a data-fancybox="gallery" href="<%= image_url @campground.photo1 %>"><img src="<%= image_url @campground.photo1 %>"></a>
+    25:         <a data-fancybox="gallery" href="<%= image_url @campground.photo2 %>"><img src="<%= image_url @campground.photo2 %>"></a>
+    26:         <a data-fancybox="gallery" href="<%= image_url @campground.photo3 %>"><img src="<%= image_url @campground.photo3 %>"></a>
+    27:         <a data-fancybox="gallery" href="<%= image_url @campground.photo4 %>"><img src="<%= image_url @campground.photo4 %>"></a>
+  
+app/views/campgrounds/show.html.erb:24:in `_app_views_campgrounds_show_html_erb___1084377848126548060_70237300053140'
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" ORDER BY "campgrounds"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 41]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/campgrounds?page=5&search=" for 127.0.0.1 at 2018-04-03 21:45:25 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"page"=>"5", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 20]]
+  Rendered campgrounds/index.html.erb within layouts/application (52.4ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 94ms (Views: 89.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/campgrounds?page=5&search=" for 127.0.0.1 at 2018-04-03 21:45:27 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"page"=>"5", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 20]]
+  Rendered campgrounds/index.html.erb within layouts/application (48.3ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 86ms (Views: 82.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-03 21:45:31 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.1ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 39ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:45:32 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (3.8ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 44ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-03 21:45:34 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (5.0ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 58ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-03 21:45:35 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (1.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (48.6ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 88ms (Views: 82.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/campgrounds?page=4&search=" for 127.0.0.1 at 2018-04-03 21:45:38 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"page"=>"4", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.5ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 15]]
+  Rendered campgrounds/index.html.erb within layouts/application (46.4ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 82ms (Views: 78.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-03 21:45:44 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.2ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 39ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-03 21:45:46 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (47.6ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 86ms (Views: 81.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:46:34 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (3.9ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-03 21:46:50 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b1ryYUKGt+c57oppJ787rATkR4lN2F3cd5WweXAQ/8A1CifUlWqbQlHRhzbLZ0YYMfyjXVZd9PFOF8LmPQ0rRg==", "campground"=>{"name"=>"prueba", "region"=>"atacama", "direction"=>"region nueva", "photo"=>"http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg", "photo1"=>"http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg", "photo2"=>"http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg", "photo3"=>"http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg", "photo4"=>"http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg"}, "commit"=>"Create Campground"}
+Unpermitted parameters: :direction, :photo1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "region", "photo", "created_at", "updated_at", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "prueba"], ["region", "atacama"], ["photo", "http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg"], ["created_at", "2018-04-04 00:46:50.236032"], ["updated_at", "2018-04-04 00:46:50.236032"], ["photo2", "http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg"], ["photo3", "http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg"], ["photo4", "http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 7ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-03 21:46:50 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.4ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+Completed 200 OK in 70ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-03 21:46:52 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (54.8ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 92ms (Views: 88.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/campgrounds?page=5&search=" for 127.0.0.1 at 2018-04-03 21:46:54 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"page"=>"5", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 20]]
+  Rendered campgrounds/index.html.erb within layouts/application (54.6ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 90ms (Views: 86.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/campgrounds/43" for 127.0.0.1 at 2018-04-03 21:47:01 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mCampground Load (0.5ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    21:     </div>
+    22:     <div class="uk-grid-item-match">
+    23:       <div class="uk-card uk-card-default uk-card-body">
+    24:         <a data-fancybox="gallery" href="<%= image_url @campground.photo1 %>"><img src="<%= image_url @campground.photo1 %>"></a>
+    25:         <a data-fancybox="gallery" href="<%= image_url @campground.photo2 %>"><img src="<%= image_url @campground.photo2 %>"></a>
+    26:         <a data-fancybox="gallery" href="<%= image_url @campground.photo3 %>"><img src="<%= image_url @campground.photo3 %>"></a>
+    27:         <a data-fancybox="gallery" href="<%= image_url @campground.photo4 %>"><img src="<%= image_url @campground.photo4 %>"></a>
+  
+app/views/campgrounds/show.html.erb:24:in `_app_views_campgrounds_show_html_erb___1084377848126548060_70237246086120'
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" ORDER BY "campgrounds"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" ORDER BY "campgrounds"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "campgrounds" WHERE "campgrounds"."id" = ?[0m  [["id", 43]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/campgrounds?page=5&search=" for 127.0.0.1 at 2018-04-03 21:48:05 -0300
+Processing by CampgroundsController#index as HTML
+Started GET "/" for 127.0.0.1 at 2018-04-03 21:48:05 -0300
+  Parameters: {"page"=>"5", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.5ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 20]]
+  Rendered campgrounds/index.html.erb within layouts/application (55.3ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 116ms (Views: 97.4ms | ActiveRecord: 1.7ms)
+
+
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (2.2ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 99ms (Views: 79.6ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:48:07 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (5.6ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 62ms (Views: 41.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:48:30 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (6.5ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+Completed 200 OK in 67ms (Views: 43.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-03 21:48:47 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VhzqeHYETF5Eu0IuBC4DYu+X2Opbmu+voqAHBWpu0rM1j41m/Go3/FTK5lchjJDxx3u8W5/AyL+DWt0UKhfTsw==", "campground"=>{"name"=>"prueba", "region"=>"atacama", "direction"=>"some direction test", "photo"=>"http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg", "photo1"=>"http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg", "photo2"=>"http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg", "photo3"=>"http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg", "photo4"=>"http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg"}, "commit"=>"Create Campground"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "prueba"], ["direction", "some direction test"], ["region", "atacama"], ["photo", "http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg"], ["created_at", "2018-04-04 00:48:47.205634"], ["updated_at", "2018-04-04 00:48:47.205634"], ["photo1", "http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg"], ["photo2", "http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg"], ["photo3", "http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg"], ["photo4", "http://www.fundacionunam.org.mx/wp-content/uploads/2016/03/herpetarioUNAM1.jpg"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 7ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-03 21:48:47 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.2ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 53ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-03 21:48:48 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (54.5ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 90ms (Views: 85.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/campgrounds?page=5&search=" for 127.0.0.1 at 2018-04-03 21:48:50 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"page"=>"5", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 20]]
+  Rendered campgrounds/index.html.erb within layouts/application (52.5ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 89ms (Views: 84.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/campgrounds/44" for 127.0.0.1 at 2018-04-03 21:48:52 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+Completed 200 OK in 48ms (Views: 41.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/campgrounds/44" for 127.0.0.1 at 2018-04-03 21:49:05 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/campgrounds/44"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/campgrounds/44" for 127.0.0.1 at 2018-04-03 21:50:59 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/44" for 127.0.0.1 at 2018-04-03 21:51:27 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (3.2ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 39ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/44" for 127.0.0.1 at 2018-04-03 21:52:28 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (3.8ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 44ms (Views: 40.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/44" for 127.0.0.1 at 2018-04-03 21:52:44 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (4.1ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 42ms (Views: 38.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/44" for 127.0.0.1 at 2018-04-03 21:53:36 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (3.8ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/44" for 127.0.0.1 at 2018-04-03 21:54:08 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (3.2ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+Completed 200 OK in 43ms (Views: 39.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/44" for 127.0.0.1 at 2018-04-03 21:54:23 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 41ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/44" for 127.0.0.1 at 2018-04-03 21:54:53 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (3.6ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/44" for 127.0.0.1 at 2018-04-03 21:56:48 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (3.8ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/44" for 127.0.0.1 at 2018-04-03 21:57:10 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (4.0ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+Completed 200 OK in 45ms (Views: 40.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/44" for 127.0.0.1 at 2018-04-03 21:57:26 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mCampground Load (0.2ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 41ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/campgrounds/44" for 127.0.0.1 at 2018-04-03 21:57:40 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (4.1ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 47ms (Views: 42.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-03 21:57:43 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.3ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 39ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-03 21:57:45 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.1ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 45ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-03 21:57:49 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.3ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 37ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-03 21:58:09 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.7ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-03 21:58:12 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.4ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-03 21:58:15 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE (name LIKE '%%')[0m
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE (name LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (55.9ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 90ms (Views: 86.5ms | ActiveRecord: 0.5ms)
+
+
