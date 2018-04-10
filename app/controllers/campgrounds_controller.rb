@@ -5,9 +5,13 @@ class CampgroundsController < ApplicationController
   def landing
   end
   def index
-    @searching = params[:search]
-    searched = Campground.search(@searching)
-    @campgrounds = searched.page(params[:page]).per(5)
+    @searching = params[:search].present? ? params[:search]: nil
+    @campgrounds = if @searching
+      searched = Campground.search(@searching)
+    else
+      searched = Campground.all
+      searched.page(params[:page]).per(5)
+    end
   end
   def show
 

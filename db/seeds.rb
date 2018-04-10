@@ -8,8 +8,8 @@
 
 Campground.destroy_all
 
-20.times do |x|
-  Campground.create(name: "camping#{x}", direction: "Avenida #{x}, ##{x*138}", region: "#{x}",
+100.times do |x|
+  Campground.create(name: Faker::StarWars.specie, direction: Faker::Address.street_address, region: Faker::Address.state,
                               photo: "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg",
                               photo1: "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg",
                               photo2: "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg",
