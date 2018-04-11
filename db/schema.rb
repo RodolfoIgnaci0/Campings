@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180403001835) do
+ActiveRecord::Schema.define(version: 20180410234139) do
 
   create_table "campgrounds", force: :cascade do |t|
     t.string "name"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20180403001835) do
     t.string "photo2"
     t.string "photo3"
     t.string "photo4"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_campgrounds_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|

@@ -13,15 +13,14 @@ class CampgroundsController < ApplicationController
       searched.page(params[:page]).per(5)
     end
   end
-  def show
-
-  end
   def new
     @campground = Campground.new
   end
   def create
     Campground.create!(campground_params)
     redirect_to root_path
+  end
+  def show
   end
 
   private
