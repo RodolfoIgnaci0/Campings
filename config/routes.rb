@@ -2,11 +2,12 @@ Rails.application.routes.draw do
   devise_for :users do
     resources :posts, only: [:index] #ver post del usuario especifico
   end
-  resources :campgrounds do
+  resources :campgrounds, only: [:show, :create, :index, :new] do
     resources :posts, only: [:index] #ver post del camping especifico
   end
 
   resources :users, only: [:index] do
+    resources :campgrounds, only: [:edit,:update]
     member do
       get :my_campgrounds
     end

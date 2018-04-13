@@ -1,0 +1,42 @@
+<div class="uk-container">
+  <fieldset class="uk-fieldset">
+    <legend class="uk-legend">Edit your campground</legend>
+    <%= form_with model: [@user, @campground], url: user_campground_path, local: true do |f| %>
+      <div class="uk-margin">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "uk-input uk-form-width-large" %>
+      </div>
+      <div class="uk-margin">
+        <%= f.label :region %>
+        <%= f.text_field :region, class: "uk-input uk-form-width-large" %>
+    </div>
+      <div class="uk-margin">
+        <%= f.label :direction %>
+        <%= f.text_field :direction, class: "uk-input uk-form-width-large" %>
+    </div>
+      <div class="uk-margin">
+        <%= f.label :photo %>
+        <%= f.text_field :photo, class: "uk-input uk-form-width-large" %>
+    </div>
+      <div class="uk-margin">
+        <%= f.label :photo1 %>
+        <%= f.text_field :photo1, class: "uk-input uk-form-width-large" %>
+    </div>
+      <div class="uk-margin">
+        <%= f.label :photo2 %>
+        <%= f.text_field :photo2, class: "uk-input uk-form-width-large" %>
+    </div>
+      <div class="uk-margin">
+        <%= f.label :photo3 %>
+        <%= f.text_field :photo3, class: "uk-input uk-form-width-large" %>
+    </div>
+      <div class="uk-margin">
+        <%= f.label :photo4 %>
+        <%= f.text_field :photo4, class: "uk-input uk-form-width-large" %>
+    </div>
+      <div class="uk-margin">
+        <%= f.submit class:"uk-button" %>
+      </div>
+    <% end %>
+  </fieldset>
+</div>

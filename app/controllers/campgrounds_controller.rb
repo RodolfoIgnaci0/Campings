@@ -1,6 +1,6 @@
 class CampgroundsController < ApplicationController
   #before_action :authenticate_user!, only: [:index]
-  before_action :set_campground, only: [:show]
+  before_action :set_campground, only: [:show, :edit, :update]
 
   def landing
   end
@@ -22,6 +22,17 @@ class CampgroundsController < ApplicationController
   end
   def show
   end
+  def edit
+  end
+  def update
+  respond_to do |format|
+    if @campground.update(campground_params)
+      format.html { redirect_to my_campgrounds_user_path(current_user), notice: 'Campground was successfully updated.' }
+    else
+      format.html { render :edit }
+    end
+  end
+end
 
   private
   def set_campground
