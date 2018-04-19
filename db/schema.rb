@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180410234139) do
+ActiveRecord::Schema.define(version: 20180417000101) do
 
   create_table "campgrounds", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20180410234139) do
     t.string "photo3"
     t.string "photo4"
     t.integer "user_id"
+    t.boolean "status", default: true
     t.index ["user_id"], name: "index_campgrounds_on_user_id"
   end
 

@@ -8,9 +8,17 @@
       <p>direction: <%= x.direction %></p>
       <p>region: <%= x.region %></p>
       <p>owner: <%= x.user_id %></p>
+      <% if x.status == true %>
+        <p>status: <span style="color:green">Active</span></p>
+      <% else %>
+        <p>status: <span style="color:red">Disable</span></p>
+      <% end %>
       <%= link_to "Edit", edit_user_campground_path(current_user, x), class:"uk-button uk-button-default" %>
-      <%= link_to "Enable", "#", class:"uk-button uk-button-default" %>
-      <%= link_to "Disable", "#", class:"uk-button uk-button-default" %>
+      <% unless x.status == true %>
+        <%= link_to "Enable", user_campground_campground_status_path(current_user,x), method: :patch, class:"uk-button uk-button-default" %>
+      <% else %>
+        <%= link_to "Disable", user_campground_campground_status_path(current_user,x), method: :patch, class:"uk-button uk-button-default" %>
+      <% end %>
     </div>
     <% end %>
   </div>

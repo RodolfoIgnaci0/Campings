@@ -9,8 +9,12 @@
 
 <hr>
 <div class="uk-container">
-  <span> Campings encontrados por palabra clave: <%= @searching %></span>
-  <%= paginate @campgrounds %>
+  <span> Campgrounds found with the given word: <%= @searching %></span>
+  <% if @campgrounds.size != 0 %>
+    <%= paginate @campgrounds %>
+  <% else %>
+    <h2>No campground were found available</h2>
+  <% end %>
 
   <% @campgrounds.each do |value| %>
     <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-scrollspy="cls:uk-animation-fade" uk-grid>
@@ -23,10 +27,12 @@
           <h3 class="uk-card-title"><%= value.name %></h3>
           <p>Region: <%= value.region %></p>
           <p>Dirección: <%= value.direction %></p>
-          <%= link_to "Ver Oferta", campground_path(value), class: "uk-button uk-button-secondary uk-button-large" %>
+          <%= link_to "See Offer", campground_path(value), class: "uk-button uk-button-secondary uk-button-large" %>
         </div>
       </div>
     </div>
   <% end %>
-  <%= paginate @campgrounds %>
+  <% if @campgrounds.size != 0 %>
+    <%= paginate @campgrounds %>
+  <% end %>
 </div>
