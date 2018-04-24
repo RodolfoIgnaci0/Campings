@@ -2,12 +2,12 @@ Rails.application.routes.draw do
   devise_for :users do
     resources :posts, only: [:index] #ver post del usuario especifico (active admin)
   end
-  resources :campgrounds, only: [:show, :create, :index, :new] do
+  resources :campgrounds, only: [:show, :index] do
     resources :posts, only: [:index] #ver post del camping especifico (active admin)
   end
 
   resources :users, only: [:index] do
-    resources :campgrounds, only: [:edit,:update] do
+    resources :campgrounds, only: [:edit,:update, :create, :new] do
       patch :campground_status
       resources :post, only: [:create]
     end

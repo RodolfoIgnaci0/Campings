@@ -26,7 +26,9 @@ class CampgroundsController < ApplicationController
   end
 
   def create
-    Campground.create!(campground_params)
+    campground = Campground.new(campground_params)
+    campground.user_id = current_user.id
+    campground.save!
     redirect_to root_path
   end
 
@@ -57,6 +59,6 @@ end
     @campground = Campground.find(params[:campground_id])
   end
   def campground_params
-    params.require(:campground).permit(:name, :direction, :region, :photo, :photo1, :photo2, :photo3, :photo4)
+    params.require(:campground).permit(:name, :direction, :region, :photo, :photo1, :photo2, :photo3, :photo4, :user_id)
   end
 end

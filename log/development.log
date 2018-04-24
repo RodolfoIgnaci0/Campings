@@ -40200,3 +40200,1860 @@ Processing by CampgroundsController#landing as HTML
 Completed 200 OK in 46ms (Views: 40.1ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-23 21:56:14 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (5.0ms)
+Completed 200 OK in 79ms (Views: 73.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 21:56:24 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EK+ADItpOA0FyaWgXgVusFIXmjalcffFIOqLxhygVTPXc/ITq9VpDzGXgCHD1SzP13JO/BWXiKfKdxD71TDFhw==", "campground"=>{"name"=>"1", "region"=>"1", "direction"=>"1", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 13ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-23 21:59:29 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.3ms)
+Completed 200 OK in 47ms (Views: 43.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 21:59:38 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yauAoM3NZEZzRB/uqe9izUKZHdFa8tBBqiYbUcdJuZoftIxAw1s8w6vpFZZn1TOvLkZMVY+sD4ljue7Q7WZxQQ==", "campground"=>{"name"=>"1", "region"=>"1", "direction"=>"1", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 21:59:40 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yauAoM3NZEZzRB/uqe9izUKZHdFa8tBBqiYbUcdJuZoftIxAw1s8w6vpFZZn1TOvLkZMVY+sD4ljue7Q7WZxQQ==", "campground"=>{"name"=>"1", "region"=>"1", "direction"=>"1", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-23 22:00:07 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yauAoM3NZEZzRB/uqe9izUKZHdFa8tBBqiYbUcdJuZoftIxAw1s8w6vpFZZn1TOvLkZMVY+sD4ljue7Q7WZxQQ=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:00:07 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.9ms)
+  Rendered shared/_navbar.html.erb (6.1ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-23 22:00:21 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.7ms)
+  Rendered shared/_navbar.html.erb (4.1ms)
+Completed 200 OK in 81ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-23 22:00:36 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zz5mEQJnZDb1oNWbsTLOoAFfVpQLaZZqVpDfimFEAVkSveaFLkt2yLOVTUzpNVhbCosHDrudJOyRVpUruYZNTw==", "user"=>{"email"=>"correo1@correo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "correo1@correo.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", "2018-04-24 01:00:36.337506"], ["sign_in_count", 2], ["updated_at", "2018-04-24 01:00:36.338631"], ["id", 22]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 200ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:00:36 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.5ms)
+Completed 200 OK in 46ms (Views: 40.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/22/my_campgrounds" for 127.0.0.1 at 2018-04-23 22:00:40 -0300
+Processing by UsersController#my_campgrounds as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.8ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 22[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (4.1ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 51ms (Views: 42.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:00:43 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.4ms)
+Completed 200 OK in 50ms (Views: 44.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 22:01:05 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DqFephmq65+Mqvf4tyDnMq5xHUM01n3iAdCcQPP+WYJVdePPLqtdwrO2eZjbY+AopXMeD0bZi9JY41KrI1HzIg==", "campground"=>{"name"=>"test", "region"=>"test", "direction"=>"test", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 22:05:53 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DqFephmq65+Mqvf4tyDnMq5xHUM01n3iAdCcQPP+WYJVdePPLqtdwrO2eZjbY+AopXMeD0bZi9JY41KrI1HzIg==", "campground"=>{"name"=>"test", "region"=>"test", "direction"=>"test", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started GET "/users/22/my_campgrounds" for 127.0.0.1 at 2018-04-23 22:09:10 -0300
+Processing by UsersController#my_campgrounds as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (1.5ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 22[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (7.9ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 72ms (Views: 60.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:09:15 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (5.0ms)
+Completed 200 OK in 67ms (Views: 61.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:11:06 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (40.5ms)
+Completed 200 OK in 111ms (Views: 71.5ms | ActiveRecord: 14.7ms)
+
+
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 22:11:18 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tyUJKFiA0W7O6nQMkr3eLOHN19CAxs/85nl+cE2YjghzQZxmGXspJkDHZeaoSY3qRRDiZdlSwNpPfGgnNF0TWA==", "campground"=>{"name"=>"test", "region"=>"test", "direction"=>"test", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 9ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:12:12 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (29.0ms)
+Completed 200 OK in 104ms (Views: 67.2ms | ActiveRecord: 13.9ms)
+
+
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 22:12:21 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TwjJNcKcrV/iYSmzdfdPjMIbs3v/Qs6D4OtVRtZLvyeLbFx7g2dVF2xMOFlPAxxKZsaGzqbWwaVJ7kMRr44idw==", "campground"=>{"name"=>"test", "region"=>"test", "direction"=>"test", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 22:12:22 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TwjJNcKcrV/iYSmzdfdPjMIbs3v/Qs6D4OtVRtZLvyeLbFx7g2dVF2xMOFlPAxxKZsaGzqbWwaVJ7kMRr44idw==", "campground"=>{"name"=>"test", "region"=>"test", "direction"=>"test", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 22:12:23 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TwjJNcKcrV/iYSmzdfdPjMIbs3v/Qs6D4OtVRtZLvyeLbFx7g2dVF2xMOFlPAxxKZsaGzqbWwaVJ7kMRr44idw==", "campground"=>{"name"=>"test", "region"=>"test", "direction"=>"test", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 22:12:23 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TwjJNcKcrV/iYSmzdfdPjMIbs3v/Qs6D4OtVRtZLvyeLbFx7g2dVF2xMOFlPAxxKZsaGzqbWwaVJ7kMRr44idw==", "campground"=>{"name"=>"test", "region"=>"test", "direction"=>"test", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-04-23 22:13:39 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TwjJNcKcrV/iYSmzdfdPjMIbs3v/Qs6D4OtVRtZLvyeLbFx7g2dVF2xMOFlPAxxKZsaGzqbWwaVJ7kMRr44idw=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:13:39 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.5ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 49ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-04-23 22:13:41 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.3ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 62ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-04-23 22:14:03 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mq+HmMLWgWqFeOIqv9E59n9T4bEJJ9aw94k8JKp1RGrWY4xOceq6JlpCOeBcUBK5ykr6HZ6V3PQ+CbxyaJVOXA==", "user"=>{"name"=>"test", "last_name"=>"test", "phone"=>"1234432", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "last_name", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "test@test.com"], ["encrypted_password", "$2a$11$FtJwBgpO6/hF.bOjY8gpRuqcBHaLbY8XOc.4iXr8dBL6zm4taFUES"], ["created_at", "2018-04-24 01:14:03.470268"], ["updated_at", "2018-04-24 01:14:03.470268"], ["name", "test"], ["last_name", "test"], ["phone", 1234432]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-04-24 01:14:03.473944"], ["last_sign_in_at", "2018-04-24 01:14:03.473944"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-04-24 01:14:03.474690"], ["id", 41]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 188ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:14:03 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.3ms)
+Completed 200 OK in 58ms (Views: 53.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:14:07 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (5.6ms)
+Completed 200 OK in 49ms (Views: 44.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 22:14:18 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"toUL1SHzN9rFXrldCmEPD3ZcKGGep3DxP2P7CKO2E6i08qiLaC83ifKdmryFqwehtR+lcuDZG0+Y2jNRVMEBZg==", "campground"=>{"name"=>"test", "region"=>"test", "direction"=>"test", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 22:14:37 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"toUL1SHzN9rFXrldCmEPD3ZcKGGep3DxP2P7CKO2E6i08qiLaC83ifKdmryFqwehtR+lcuDZG0+Y2jNRVMEBZg==", "campground"=>{"name"=>"test", "region"=>"test", "direction"=>"test", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 31ms (ActiveRecord: 6.9ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:14:43 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (41.5ms)
+Completed 200 OK in 97ms (Views: 85.2ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 22:14:52 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sqW2izea20U+dU5oC9sK+U9VIA2VoaQWmnJClzeBKTGwWs/2KyP6pv6F+8EaO/5ns63GZ28tR2M6GyqnbcyyRg==", "campground"=>{"name"=>"test", "region"=>"test", "direction"=>"test", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 22:14:53 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sqW2izea20U+dU5oC9sK+U9VIA2VoaQWmnJClzeBKTGwWs/2KyP6pv6F+8EaO/5ns63GZ28tR2M6GyqnbcyyRg==", "campground"=>{"name"=>"test", "region"=>"test", "direction"=>"test", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:15:52 -0300
+Processing by CampgroundsController#new as HTML
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (37.6ms)
+Completed 200 OK in 110ms (Views: 68.2ms | ActiveRecord: 18.5ms)
+
+
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 22:16:03 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"srdJehIVfBHV+35c8+A+6LWlZlJGqGjYmbcvZZX1y1mwSDAHDqxd8hULy/XiAMp2SV2AOLwki6053kdVz7hQLg==", "campground"=>{"name"=>"tetst", "region"=>"test", "direction"=>"tes", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.6ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/campgrounds_controller.rb:59:in `campground_params'
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 22:16:05 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"srdJehIVfBHV+35c8+A+6LWlZlJGqGjYmbcvZZX1y1mwSDAHDqxd8hULy/XiAMp2SV2AOLwki6053kdVz7hQLg==", "campground"=>{"name"=>"tetst", "region"=>"test", "direction"=>"tes", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.7ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/campgrounds_controller.rb:59:in `campground_params'
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/campgrounds" for 127.0.0.1 at 2018-04-23 22:16:13 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"srdJehIVfBHV+35c8+A+6LWlZlJGqGjYmbcvZZX1y1mwSDAHDqxd8hULy/XiAMp2SV2AOLwki6053kdVz7hQLg==", "campground"=>{"name"=>"tetst", "region"=>"test", "direction"=>"tes", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/campgrounds_controller.rb:59:in `campground_params'
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started GET "/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:17:51 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 19ms (ActiveRecord: 8.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Campground with 'id'=new):
+  
+app/controllers/campgrounds_controller.rb:54:in `set_campground'
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:22:40 -0300
+Processing by CampgroundsController#landing as HTML
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:22:40 -0300
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (54.6ms)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 19.1ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"campgrounds"}, missing required keys: [:user_id]):
+     7:               <a href="#">Options</a>
+     8:               <div class="uk-navbar-dropdown">
+     9:                 <ul class="uk-nav uk-navbar-dropdown-nav">
+    10:                   <li><%= link_to 'Create Campground', new_user_campground_path %></li>
+    11:                   <li><%= link_to 'Edit Campground', my_campgrounds_user_path(current_user) %></li>
+    12:                 </ul>
+    13:               </div>
+  
+app/views/shared/_navbar.html.erb:10:in `_app_views_shared__navbar_html_erb__2462933546088256767_70278698763740'
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___3768517597588838611_70278745071900'
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (50.4ms)
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 12.9ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"campgrounds"}, missing required keys: [:user_id]):
+     7:               <a href="#">Options</a>
+     8:               <div class="uk-navbar-dropdown">
+     9:                 <ul class="uk-nav uk-navbar-dropdown-nav">
+    10:                   <li><%= link_to 'Create Campground', new_user_campground_path %></li>
+    11:                   <li><%= link_to 'Edit Campground', my_campgrounds_user_path(current_user) %></li>
+    12:                 </ul>
+    13:               </div>
+  
+app/views/shared/_navbar.html.erb:10:in `_app_views_shared__navbar_html_erb__2462933546088256767_70278698763740'
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___3768517597588838611_70278745071900'
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:22:58 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (5.8ms)
+Completed 200 OK in 54ms (Views: 49.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:23:06 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.7ms)
+Completed 200 OK in 79ms (Views: 45.8ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:23:23 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bBukSZkWesuUMfqw5EzJbY50dzHnFhO7CuMpstUXCEM3Omr7vapWhJXKXnNQLdy871J5/gEZcG1aZkzgxh2jXg==", "campground"=>{"name"=>"test", "region"=>"test", "direction"=>"test", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 9ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:23:44 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bBukSZkWesuUMfqw5EzJbY50dzHnFhO7CuMpstUXCEM3Omr7vapWhJXKXnNQLdy871J5/gEZcG1aZkzgxh2jXg==", "campground"=>{"name"=>"test", "region"=>"test", "direction"=>"test", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 11]]
+Started GET "/users/41/my_campgrounds" for 127.0.0.1 at 2018-04-23 22:26:40 -0300
+Processing by UsersController#my_campgrounds as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.7ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (3.6ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 69ms (Views: 60.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:26:43 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.6ms)
+Completed 200 OK in 69ms (Views: 63.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:26:47 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2pwEjo2dhqdNPTG1FR6bP4qUoWoe049TA6jFjSxsbAiBvco8qSGq6EzGlXahf47u67Kvpfjc7IVTLaDfP2bHFQ==", "campground"=>{"name"=>"", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:26:48 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2pwEjo2dhqdNPTG1FR6bP4qUoWoe049TA6jFjSxsbAiBvco8qSGq6EzGlXahf47u67Kvpfjc7IVTLaDfP2bHFQ==", "campground"=>{"name"=>"", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:26:53 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (5.2ms)
+Completed 200 OK in 67ms (Views: 60.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-23 22:26:54 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE "campgrounds"."status" = $1[0m  [["status", "t"]]
+  [1m[36mCampground Load (0.7ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (67.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.3ms)
+Completed 200 OK in 116ms (Views: 110.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:26:58 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.4ms)
+Completed 200 OK in 65ms (Views: 58.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:27:02 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3TBhrnddnuKTGjCsT46f30j1QY/7ha7IB4wxAcFKTq+GEa8cU+GyrZLhlG/774oOKdNPQB2KzR5XCVRT0kDlsg==", "campground"=>{"name"=>"", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:27:29 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.7ms)
+Completed 200 OK in 49ms (Views: 45.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-23 22:27:34 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE "campgrounds"."status" = $1[0m  [["status", "t"]]
+  [1m[36mCampground Load (0.6ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (65.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.5ms)
+Completed 200 OK in 116ms (Views: 109.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/campgrounds/1" for 127.0.0.1 at 2018-04-23 22:27:45 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCampground Load (1.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.6ms)
+Completed 200 OK in 70ms (Views: 59.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:28:03 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.2ms)
+Completed 200 OK in 66ms (Views: 58.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:28:14 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VAY0CqYlZSfIKN76Az7oP1UHKJzxDFNYprM4htsk9hoPJ/q4gplJaMnTejm3X/3uNCEmUxcDMI72Nl3UyC5dBw==", "campground"=>{"name"=>"", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:28:46 -0300
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (117.2ms)
+Completed 200 OK in 480ms (Views: 446.1ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:28:51 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (680.4ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (8.7ms)
+Completed 200 OK in 797ms (Views: 749.3ms | ActiveRecord: 8.9ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:28:53 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PE9QWuQzl5I431lJnwQkdZZ6TPH6119HU9/ynPfRq2Bnbp7owI+73Tkk/YorZTGk91xCPhzYPJEDWpfO5NsAfQ==", "campground"=>{"name"=>"", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 14ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:30:58 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (36.5ms)
+Completed 200 OK in 114ms (Views: 72.8ms | ActiveRecord: 14.4ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:31:01 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/45MXK9ng61xAyG2ZJqfAidDkNjmx3SGYdzsPyXnAxv9cTUhs96iTrHzlB91emuc27t2shxLl/PBtYQPf6qYbA==", "campground"=>{"name"=>"", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:31:01 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.6ms)
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:31:10 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.6ms)
+Completed 200 OK in 48ms (Views: 44.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-23 22:31:11 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE "campgrounds"."status" = $1[0m  [["status", "t"]]
+  [1m[36mCampground Load (0.9ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (68.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.7ms)
+Completed 200 OK in 123ms (Views: 115.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/campgrounds?page=21&search=" for 127.0.0.1 at 2018-04-23 22:31:14 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"page"=>"21", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 100]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE "campgrounds"."status" = $1[0m  [["status", "t"]]
+  [1m[36mCampground Load (0.7ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 100]]
+  Rendered campgrounds/index.html.erb within layouts/application (67.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.8ms)
+Completed 200 OK in 119ms (Views: 108.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:31:19 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.7ms)
+Completed 200 OK in 52ms (Views: 47.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:31:33 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HOhh7MhdQKTcbEqiG6yy4YcEBLEnrFMLan/kzvJvltZHya9e7OFs692X7mGvzacw5iIKfsGjMN06+oGc4WU9yw==", "campground"=>{"name"=>"text", "region"=>"teasd", "direction"=>"tads", "photo"=>"1111", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 7ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:31:33 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.9ms)
+Completed 200 OK in 53ms (Views: 48.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-23 22:31:35 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE "campgrounds"."status" = $1[0m  [["status", "t"]]
+  [1m[36mCampground Load (0.6ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (62.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.2ms)
+Completed 200 OK in 111ms (Views: 104.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/campgrounds?page=21&search=" for 127.0.0.1 at 2018-04-23 22:31:44 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"page"=>"21", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 100]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE "campgrounds"."status" = $1[0m  [["status", "t"]]
+  [1m[36mCampground Load (0.7ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 100]]
+  Rendered campgrounds/index.html.erb within layouts/application (59.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.3ms)
+Completed 200 OK in 109ms (Views: 101.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:31:50 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (14.3ms)
+Completed 200 OK in 57ms (Views: 52.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/41/my_campgrounds" for 127.0.0.1 at 2018-04-23 22:32:55 -0300
+Processing by UsersController#my_campgrounds as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.6ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (6.0ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 82ms (Views: 40.2ms | ActiveRecord: 10.8ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Mon Calamari"], ["direction", "4596 Altenwerth Spurs"], ["region", "North Dakota"], ["photo", "https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg"], ["created_at", "2018-04-24 01:34:03.223784"], ["updated_at", "2018-04-24 01:34:03.223784"], ["photo1", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo2", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo3", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["photo4", "https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"], ["user_id", 41]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[33mCampground Store (300.8ms)[0m  {"id":106}
+Started GET "/users/41/my_campgrounds" for 127.0.0.1 at 2018-04-23 22:34:14 -0300
+Processing by UsersController#my_campgrounds as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.7ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (21.4ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 65ms (Views: 54.3ms | ActiveRecord: 4.6ms)
+
+
+Started PATCH "/users/41/campgrounds/106/campground_status" for 127.0.0.1 at 2018-04-23 22:34:17 -0300
+Processing by CampgroundsController#campground_status as HTML
+  Parameters: {"authenticity_token"=>"ksVAl8n0ELZKi6zgkpeKIGrOP0Is8TcJTp6pBI1JsFuQOjnq1U0xVYp7GUmDd36+ljbZKNZ91Hzu98E01wQrLA==", "user_id"=>"41", "campground_id"=>"106"}
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = $1 LIMIT $2[0m  [["id", 106], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "campgrounds" SET "status" = $1, "updated_at" = $2 WHERE "campgrounds"."id" = $3[0m  [["status", "f"], ["updated_at", "2018-04-24 01:34:17.141483"], ["id", 106]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[33mCampground Store (55.1ms)[0m  {"id":106}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/41/my_campgrounds.106
+Completed 302 Found in 80ms (Searchkick: 55.1ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/users/41/my_campgrounds.106" for 127.0.0.1 at 2018-04-23 22:34:17 -0300
+Processing by UsersController#my_campgrounds as 
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.6ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 121ms (Views: 88.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/41/campgrounds/106/edit" for 127.0.0.1 at 2018-04-23 22:34:37 -0300
+Processing by CampgroundsController#edit as HTML
+  Parameters: {"user_id"=>"41", "id"=>"106"}
+  [1m[36mCampground Load (1.6ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = $1 LIMIT $2[0m  [["id", 106], ["LIMIT", 1]]
+  Rendering campgrounds/edit.html.erb within layouts/application
+  Rendered campgrounds/edit.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.0ms)
+Completed 200 OK in 70ms (Views: 61.7ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/users/41/campgrounds/106" for 127.0.0.1 at 2018-04-23 22:34:41 -0300
+Processing by CampgroundsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/L1iwbqWbRa7pBttCVNDNDEkPmP7UfNo2VIS2ca34vAtXTUF82jkmuS9qP57PTjPOz15T2z+hrDxuqSsE4OCQA==", "campground"=>{"name"=>"2Mon Calamari", "region"=>"North Dakota", "direction"=>"4596 Altenwerth Spurs", "photo"=>"https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg", "photo1"=>"https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg", "photo2"=>"https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg", "photo3"=>"https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg", "photo4"=>"https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"}, "commit"=>"Update Campground", "user_id"=>"41", "id"=>"106"}
+  [1m[36mCampground Load (0.7ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = $1 LIMIT $2[0m  [["id", 106], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "campgrounds" SET "name" = $1, "updated_at" = $2 WHERE "campgrounds"."id" = $3[0m  [["name", "2Mon Calamari"], ["updated_at", "2018-04-24 01:34:41.424007"], ["id", 106]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[33mCampground Store (37.5ms)[0m  {"id":106}
+Redirected to http://localhost:3000/users/41/my_campgrounds
+Completed 302 Found in 51ms (Searchkick: 37.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users/41/my_campgrounds" for 127.0.0.1 at 2018-04-23 22:34:41 -0300
+Processing by UsersController#my_campgrounds as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.6ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (3.1ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 51ms (Views: 44.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/41/my_campgrounds" for 127.0.0.1 at 2018-04-23 22:34:48 -0300
+Processing by UsersController#my_campgrounds as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.6ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (2.8ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+Completed 200 OK in 48ms (Views: 41.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/41/campgrounds/106/edit" for 127.0.0.1 at 2018-04-23 22:34:52 -0300
+Processing by CampgroundsController#edit as HTML
+  Parameters: {"user_id"=>"41", "id"=>"106"}
+  [1m[36mCampground Load (0.8ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = $1 LIMIT $2[0m  [["id", 106], ["LIMIT", 1]]
+  Rendering campgrounds/edit.html.erb within layouts/application
+  Rendered campgrounds/edit.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.7ms)
+Completed 200 OK in 69ms (Views: 61.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/41/my_campgrounds" for 127.0.0.1 at 2018-04-23 22:34:58 -0300
+Processing by UsersController#my_campgrounds as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.6ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (3.1ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 59ms (Views: 50.6ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/users/41/campgrounds/106/campground_status" for 127.0.0.1 at 2018-04-23 22:35:06 -0300
+Processing by CampgroundsController#campground_status as HTML
+  Parameters: {"authenticity_token"=>"4IlBojdYqvMCetenslnXO8xsQhzxv+2IyKR2fu0LAdzidjjfK+GLEMKKYg6juSOlMJSkdgszDv1ozR5Ot0aaqw==", "user_id"=>"41", "campground_id"=>"106"}
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = $1 LIMIT $2[0m  [["id", 106], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "campgrounds" SET "status" = $1, "updated_at" = $2 WHERE "campgrounds"."id" = $3[0m  [["status", "t"], ["updated_at", "2018-04-24 01:35:06.792812"], ["id", 106]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[33mCampground Store (41.6ms)[0m  {"id":106}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/41/my_campgrounds.106
+Completed 302 Found in 55ms (Searchkick: 41.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/users/41/my_campgrounds.106" for 127.0.0.1 at 2018-04-23 22:35:06 -0300
+Processing by UsersController#my_campgrounds as 
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.7ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+Completed 200 OK in 172ms (Views: 120.6ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/users/41/campgrounds/106/edit" for 127.0.0.1 at 2018-04-23 22:36:36 -0300
+Processing by CampgroundsController#edit as HTML
+  Parameters: {"user_id"=>"41", "id"=>"106"}
+  [1m[36mCampground Load (0.7ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = $1 LIMIT $2[0m  [["id", 106], ["LIMIT", 1]]
+  Rendering campgrounds/edit.html.erb within layouts/application
+  Rendered campgrounds/edit.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.2ms)
+Completed 200 OK in 70ms (Views: 61.9ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/users/41/campgrounds/106" for 127.0.0.1 at 2018-04-23 22:36:40 -0300
+Processing by CampgroundsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8fanBsYMbY0PooANR47oCij8JFpIQ7s9b4txfA7+8xQgFvDCj/LkAVC7M5414JPxIuVjdt/szuVHY8cJ28qTpA==", "campground"=>{"name"=>"2Mon Calamari2", "region"=>"North Dakota", "direction"=>"4596 Altenwerth Spurs", "photo"=>"https://media-cdn.tripadvisor.com/media/photo-s/0e/fc/a6/62/camping-la-playa-ibiza.jpg", "photo1"=>"https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg", "photo2"=>"https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg", "photo3"=>"https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg", "photo4"=>"https://comps.canstockphoto.es/pequeño-naranja-acampar-tienda-almacen-de-fotografias_csp39674100.jpg"}, "commit"=>"Update Campground", "user_id"=>"41", "id"=>"106"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = $1 LIMIT $2[0m  [["id", 106], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "campgrounds" SET "name" = $1, "updated_at" = $2 WHERE "campgrounds"."id" = $3[0m  [["name", "2Mon Calamari2"], ["updated_at", "2018-04-24 01:36:40.011705"], ["id", 106]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[33mCampground Store (40.1ms)[0m  {"id":106}
+Redirected to http://localhost:3000/users/41/my_campgrounds
+Completed 302 Found in 53ms (Searchkick: 40.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/users/41/my_campgrounds" for 127.0.0.1 at 2018-04-23 22:36:40 -0300
+Processing by UsersController#my_campgrounds as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.6ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 49ms (Views: 43.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:38:43 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (5.2ms)
+Completed 200 OK in 44ms (Views: 39.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-23 22:38:45 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE "campgrounds"."status" = $1[0m  [["status", "t"]]
+  [1m[36mCampground Load (0.7ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (63.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.6ms)
+Completed 200 OK in 118ms (Views: 111.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/campgrounds/6" for 127.0.0.1 at 2018-04-23 22:38:48 -0300
+Processing by CampgroundsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering campgrounds/show.html.erb within layouts/application
+  Rendered campgrounds/show.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (5.3ms)
+Completed 200 OK in 74ms (Views: 63.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:38:54 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.6ms)
+Completed 200 OK in 53ms (Views: 48.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/41/my_campgrounds" for 127.0.0.1 at 2018-04-23 22:38:58 -0300
+Processing by UsersController#my_campgrounds as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.6ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (3.2ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 50ms (Views: 42.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:39:06 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.5ms)
+Completed 200 OK in 66ms (Views: 60.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:39:08 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3NDwVAVLAo4psC7khkpRIHo0ZWO56H47SquGaUZ+vTSH8T7mIfcuwShLiicyK0TxGxJrrF/nHe0aLuM7VXQWKQ==", "campground"=>{"name"=>"", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:40:57 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.8ms)
+Completed 200 OK in 130ms (Views: 45.4ms | ActiveRecord: 15.7ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:41:17 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I2gL/TncTd9pGZIiS1S7dWPhPFbJeow4wImqmLhtE7Uhl3KAJWVsPKnpJ4tatE/rnxnaPDP2b01g4MKo4iCIwg==", "campground"=>{"name"=>"test", "region"=>"test", "direction"=>"test", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:30:in `create'
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:41:19 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I2gL/TncTd9pGZIiS1S7dWPhPFbJeow4wImqmLhtE7Uhl3KAJWVsPKnpJ4tatE/rnxnaPDP2b01g4MKo4iCIwg==", "campground"=>{"name"=>"test", "region"=>"test", "direction"=>"test", "photo"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo1"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo2"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo3"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", "photo4"=>"https://images.pexels.com/photos/776117/pexels-photo-776117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:30:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 11]]
+  [1m[36mCampground Load (1.0ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" ORDER BY "campgrounds"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:44:16 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering campgrounds/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered campgrounds/new.html.erb within layouts/application (7.9ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 54ms (Views: 47.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:44:21 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YnA3rewXxGylm9fqjIpqNyAmAkycGdRJ1MyzgGnsbk5gj07Q8K7lj2VrYkOdap6p3N7kJmaVNzx0pduwM6H1OQ==", "campground"=>{"name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:30:in `create'
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:46:19 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering campgrounds/new.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered campgrounds/new.html.erb within layouts/application (7.3ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+Completed 200 OK in 128ms (Views: 68.3ms | ActiveRecord: 13.9ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:46:24 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6/23nB/UfE9Y110cybw8Z0W4e13r/oraP3Iw4ph36VPpAs7hA21drJgn6LXYXMj5uUCdNxFyaa+fG1jSwjpyJA==", "campground"=>{"name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:30:in `create'
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:46:26 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6/23nB/UfE9Y110cybw8Z0W4e13r/oraP3Iw4ph36VPpAs7hA21drJgn6LXYXMj5uUCdNxFyaa+fG1jSwjpyJA==", "campground"=>{"name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:30:in `create'
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:47:12 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering campgrounds/new.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered campgrounds/new.html.erb within layouts/application (8.0ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 56ms (Views: 49.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:47:23 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x8M9DPQPgr4QSF0LLgi7002Sml+7v31gx8Sggf+CeB3FPERx6LajXdC46KI/6E9NsWp8NUEznhVnrcixpc/jag==", "campground"=>{"name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>"", "user_id"=>"41"}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "test"], ["direction", ""], ["region", ""], ["photo", ""], ["created_at", "2018-04-24 01:47:23.708862"], ["updated_at", "2018-04-24 01:47:23.708862"], ["photo1", ""], ["photo2", ""], ["photo3", ""], ["photo4", ""], ["user_id", 41]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[33mCampground Store (34.6ms)[0m  {"id":107}
+Redirected to http://localhost:3000/
+Completed 200 OK in 48ms (Searchkick: 34.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:47:23 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.6ms)
+Completed 200 OK in 50ms (Views: 46.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-23 22:47:29 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE "campgrounds"."status" = $1[0m  [["status", "t"]]
+  [1m[36mCampground Load (0.6ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (73.8ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.6ms)
+Completed 200 OK in 121ms (Views: 113.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/41/my_campgrounds" for 127.0.0.1 at 2018-04-23 22:47:32 -0300
+Processing by UsersController#my_campgrounds as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.7ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (3.8ms)
+  Rendered shared/_navbar.html.erb (2.4ms)
+Completed 200 OK in 62ms (Views: 54.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:48:50 -0300
+  
+SyntaxError (/Users/rodolfoperezgaete/Desktop/Campings/app/controllers/campgrounds_controller.rb:60: syntax error, unexpected ':', expecting ')'
+, :photo3, :photo4, :user_id :current_user)
+                              ^):
+  
+app/controllers/campgrounds_controller.rb:60: syntax error, unexpected ':', expecting ')'
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:49:01 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered campgrounds/new.html.erb within layouts/application (32.2ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 107ms (Views: 65.6ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:50:12 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.8ms)
+Completed 200 OK in 118ms (Views: 43.7ms | ActiveRecord: 16.2ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:50:18 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"79+jTm2cw1i/1QHW25BewZp246IImKc6seAf2ta7us3tINozcSXiu38ltH/KcKpfZo4FyPIURE8RiXfqjPYhug==", "campground"=>{"name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:30:in `create'
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:50:40 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (35.1ms)
+Completed 200 OK in 113ms (Views: 72.6ms | ActiveRecord: 13.9ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:50:45 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u8ENEQinhX0HOQMte8N56vS5ZpeSqLGYuHusJ7CC9Yy5PnRsFB6knsfJtoRqI410CEGA/WgkUu0YEsQX6s9u+w==", "campground"=>{"name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:50:59 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (15.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (5.2ms)
+Completed 200 OK in 68ms (Views: 64.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:51:03 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dtbw6SaT9GLTl1gTHF1RWKH67ab9nFe0uO8kIUyjUk8MKYmUOirVgRNn7boNvaXGXQILzAcQtMEYhkwRFu7JOA==", "campground"=>{"name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:51:13 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.5ms)
+Completed 200 OK in 58ms (Views: 54.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:51:17 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"juNylWLx9DU5XFlGaBKMBRILKJSJqepwGqNApK013QCMHAvofkjV1vms7O958nib7vPO/nMlCQW6yiiU93hGdw==", "campground"=>{"name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:54:41 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered campgrounds/new.html.erb within layouts/application (9.3ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 53ms (Views: 48.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:55:02 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.0ms)
+Completed 200 OK in 57ms (Views: 52.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:55:08 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `current_user' for nil:NilClass):
+    4:     <%= form_with model:[@user, @campground], url: user_campgrounds_path do |f| %>
+    5:       <div class="uk-margin">
+    6:         <%= f.label :ownes %>
+    7:         <%= f.text_field :user_id, value: @user.current_user, class: "uk-input uk-form-width-large" %>
+    8:       </div>
+    9:       <div class="uk-margin">
+   10:         <%= f.label :name %>
+  
+app/views/campgrounds/new.html.erb:7:in `block in _app_views_campgrounds_new_html_erb___1881721894223269433_70160916693380'
+app/views/campgrounds/new.html.erb:4:in `_app_views_campgrounds_new_html_erb___1881721894223269433_70160916693380'
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:55:13 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered campgrounds/new.html.erb within layouts/application (7.5ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+Completed 200 OK in 54ms (Views: 50.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:55:22 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5P3NBwU4GWR77d4YIAHd1Pa9csQxC3LGdR0GJUBTzZjmArR6GYE4h7sda7Ex4SlKCkWUrsuHkbPVdG4VGh5W7w==", "campground"=>{"user_id"=>"#<User:0x007f9f34f7ffa0>", "name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:55:23 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5P3NBwU4GWR77d4YIAHd1Pa9csQxC3LGdR0GJUBTzZjmArR6GYE4h7sda7Ex4SlKCkWUrsuHkbPVdG4VGh5W7w==", "campground"=>{"user_id"=>"#<User:0x007f9f34f7ffa0>", "name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:55:34 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.9ms)
+Completed 200 OK in 63ms (Views: 59.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:55:39 -0300
+Processing by CampgroundsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Pti6Vu7pnbhNsD7fIk73I7nc1Yov1xxDde2GN5Wi8TiBBuURwKHlSHGdVJtac9Cch+VPNIzvwStvt4ohBsQsw==", "campground"=>{"user_id"=>"41", "name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "test"], ["direction", ""], ["region", ""], ["photo", ""], ["created_at", "2018-04-24 01:55:39.748198"], ["updated_at", "2018-04-24 01:55:39.748198"], ["photo1", ""], ["photo2", ""], ["photo3", ""], ["photo4", ""], ["user_id", 41]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[33mCampground Store (27.7ms)[0m  {"id":108}
+Redirected to http://localhost:3000/
+Completed 200 OK in 38ms (Searchkick: 27.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-23 22:55:39 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (7.4ms)
+Completed 200 OK in 58ms (Views: 52.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/campgrounds?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2018-04-23 22:55:41 -0300
+Processing by CampgroundsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering campgrounds/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "campgrounds" WHERE "campgrounds"."status" = $1[0m  [["status", "t"]]
+  [1m[36mCampground Load (0.6ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."status" = $1 LIMIT $2 OFFSET $3[0m  [["status", "t"], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered campgrounds/index.html.erb within layouts/application (65.2ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (5.4ms)
+Completed 200 OK in 123ms (Views: 116.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/41/my_campgrounds" for 127.0.0.1 at 2018-04-23 22:55:45 -0300
+Processing by UsersController#my_campgrounds as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.6ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (3.4ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 51ms (Views: 43.7ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/users/41/campgrounds/107/campground_status" for 127.0.0.1 at 2018-04-23 22:55:49 -0300
+Processing by CampgroundsController#campground_status as HTML
+  Parameters: {"authenticity_token"=>"iQD2yqHltjKcu1IPiiv2za+CtlOqA/p1WMaopEX40lmL/4+3vVyX0VxL56abywJTU3pQOVCPGQD4r8CUH7VJLg==", "user_id"=>"41", "campground_id"=>"107"}
+  [1m[36mCampground Load (0.7ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = $1 LIMIT $2[0m  [["id", 107], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "campgrounds" SET "status" = $1, "updated_at" = $2 WHERE "campgrounds"."id" = $3[0m  [["status", "f"], ["updated_at", "2018-04-24 01:55:49.665899"], ["id", 107]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[33mCampground Store (33.0ms)[0m  {"id":107}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/41/my_campgrounds.107
+Completed 302 Found in 47ms (Searchkick: 33.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users/41/my_campgrounds.107" for 127.0.0.1 at 2018-04-23 22:55:49 -0300
+Processing by UsersController#my_campgrounds as 
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.7ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 120ms (Views: 92.4ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/users/41/campgrounds/108/campground_status" for 127.0.0.1 at 2018-04-23 22:55:52 -0300
+Processing by CampgroundsController#campground_status as HTML
+  Parameters: {"authenticity_token"=>"ZOa9u6fzg1EG10sKHJbMSLRE3/PKkDwjtvHcTPuUb0lmGcTGu0qissYn/qMNdjjWSLw5mTAc31YWmLR8odn0Pg==", "user_id"=>"41", "campground_id"=>"108"}
+  [1m[36mCampground Load (0.3ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."id" = $1 LIMIT $2[0m  [["id", 108], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "campgrounds" SET "status" = $1, "updated_at" = $2 WHERE "campgrounds"."id" = $3[0m  [["status", "f"], ["updated_at", "2018-04-24 01:55:52.058497"], ["id", 108]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[33mCampground Store (14.1ms)[0m  {"id":108}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/41/my_campgrounds.108
+Completed 302 Found in 27ms (Searchkick: 14.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/users/41/my_campgrounds.108" for 127.0.0.1 at 2018-04-23 22:55:52 -0300
+Processing by UsersController#my_campgrounds as 
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.7ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (4.7ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 132ms (Views: 99.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:56:09 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    4:     <%= form_with model:[@user, @campground], url: user_campgrounds_path do |f| %>
+    5:       <div class="uk-margin">
+    6:         <%= f.label :ownes %>
+    7:         <%= f.text_field :user_id, value: @user.id, class: "uk-input uk-form-width-large" %>
+    8:       </div>
+    9:       <div class="uk-margin">
+   10:         <%= f.label :name %>
+  
+app/views/campgrounds/new.html.erb:7:in `block in _app_views_campgrounds_new_html_erb___1881721894223269433_70160924889760'
+app/views/campgrounds/new.html.erb:4:in `_app_views_campgrounds_new_html_erb___1881721894223269433_70160924889760'
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:56:52 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered campgrounds/new.html.erb within layouts/application (8.1ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 51ms (Views: 46.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:57:55 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.0ms)
+Completed 200 OK in 57ms (Views: 51.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 22:58:25 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (5.4ms)
+Completed 200 OK in 55ms (Views: 51.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:58:30 -0300
+Processing by CampgroundsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D0JoCzmOFYL4+G4PXVXNucIw2lVee8gHYfwx+G2z/mwNvRF2JTc0YTgI26ZMtTknPsg8P6T3K3LBlVnIN/5lGw==", "campground"=>{"name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 22:59:23 -0300
+Processing by CampgroundsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D0JoCzmOFYL4+G4PXVXNucIw2lVee8gHYfwx+G2z/mwNvRF2JTc0YTgI26ZMtTknPsg8P6T3K3LBlVnIN/5lGw==", "campground"=>{"name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 7.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/campgrounds_controller.rb:59:in `campground_params'
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 23:00:00 -0300
+Processing by CampgroundsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D0JoCzmOFYL4+G4PXVXNucIw2lVee8gHYfwx+G2z/mwNvRF2JTc0YTgI26ZMtTknPsg8P6T3K3LBlVnIN/5lGw==", "campground"=>{"name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 71ms (ActiveRecord: 14.6ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 23:00:14 -0300
+Processing by CampgroundsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D0JoCzmOFYL4+G4PXVXNucIw2lVee8gHYfwx+G2z/mwNvRF2JTc0YTgI26ZMtTknPsg8P6T3K3LBlVnIN/5lGw==", "campground"=>{"name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<CampgroundsController:0x007f9f39744cf0>
+Did you mean?  user_session):
+  
+app/controllers/campgrounds_controller.rb:60:in `campground_params'
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 23:00:32 -0300
+Processing by CampgroundsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D0JoCzmOFYL4+G4PXVXNucIw2lVee8gHYfwx+G2z/mwNvRF2JTc0YTgI26ZMtTknPsg8P6T3K3LBlVnIN/5lGw==", "campground"=>{"name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 76ms (ActiveRecord: 14.0ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started PUT "/__web_console/repl_sessions/67c387ddbc27a8da0f1cc0bb2c6526cb" for 127.0.0.1 at 2018-04-23 23:00:38 -0300
+Started PUT "/__web_console/repl_sessions/67c387ddbc27a8da0f1cc0bb2c6526cb" for 127.0.0.1 at 2018-04-23 23:00:38 -0300
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 23:10:10 -0300
+Processing by CampgroundsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D0JoCzmOFYL4+G4PXVXNucIw2lVee8gHYfwx+G2z/mwNvRF2JTc0YTgI26ZMtTknPsg8P6T3K3LBlVnIN/5lGw==", "campground"=>{"name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 6.8ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/campgrounds_controller.rb:59:in `campground_params'
+app/controllers/campgrounds_controller.rb:29:in `create'
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 23:11:36 -0300
+  
+SyntaxError (/Users/rodolfoperezgaete/Desktop/Campings/app/controllers/campgrounds_controller.rb:30: syntax error, unexpected ':', expecting keyword_end
+    campground = user_id: current_user
+                         ^):
+  
+app/controllers/campgrounds_controller.rb:30: syntax error, unexpected ':', expecting keyword_end
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 23:12:57 -0300
+Processing by CampgroundsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D0JoCzmOFYL4+G4PXVXNucIw2lVee8gHYfwx+G2z/mwNvRF2JTc0YTgI26ZMtTknPsg8P6T3K3LBlVnIN/5lGw==", "campground"=>{"name"=>"test", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 65ms (ActiveRecord: 14.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-23 23:12:58 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.4ms)
+Completed 200 OK in 50ms (Views: 46.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 23:13:02 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.7ms)
+Completed 200 OK in 71ms (Views: 65.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/41/my_campgrounds" for 127.0.0.1 at 2018-04-23 23:13:04 -0300
+Processing by UsersController#my_campgrounds as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.8ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (4.4ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 54ms (Views: 45.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 23:13:08 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.6ms)
+Completed 200 OK in 69ms (Views: 63.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 23:13:14 -0300
+Processing by CampgroundsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LQv2kzx2VToelKYfAfeIZsbgIRTM/3Ikjj5DaxayKt92KjghGMp5dR9vAty1lp23p8Yv2yrwEfLeuyY5BbiBwg==", "campground"=>{"name"=>"test2", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-23 23:13:14 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.9ms)
+Completed 200 OK in 50ms (Views: 46.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/41/my_campgrounds" for 127.0.0.1 at 2018-04-23 23:13:16 -0300
+Processing by UsersController#my_campgrounds as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.6ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 70ms (Views: 61.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 23:13:50 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (42.1ms)
+Completed 200 OK in 113ms (Views: 75.2ms | ActiveRecord: 15.0ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 23:13:55 -0300
+Processing by CampgroundsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PVU41FOIAR1G3hIU3SMmIeJE4gQEYAF+bIClL1nnTjpmdPZmdzQtUkclttdpQjPwg2Lsy+JvYqg8BcB9Su3lJw==", "campground"=>{"name"=>"test2", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 8ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:31:in `create'
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 23:14:09 -0300
+Processing by CampgroundsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PVU41FOIAR1G3hIU3SMmIeJE4gQEYAF+bIClL1nnTjpmdPZmdzQtUkclttdpQjPwg2Lsy+JvYqg8BcB9Su3lJw==", "campground"=>{"name"=>"test2", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 74ms (ActiveRecord: 18.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-23 23:14:10 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.7ms)
+Completed 200 OK in 68ms (Views: 65.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/41/my_campgrounds" for 127.0.0.1 at 2018-04-23 23:14:13 -0300
+Processing by UsersController#my_campgrounds as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.7ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (4.3ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 54ms (Views: 46.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 23:14:16 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.5ms)
+Completed 200 OK in 51ms (Views: 46.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/41/campgrounds/new" for 127.0.0.1 at 2018-04-23 23:14:46 -0300
+Processing by CampgroundsController#new as HTML
+  Parameters: {"user_id"=>"41"}
+  Rendering campgrounds/new.html.erb within layouts/application
+  Rendered campgrounds/new.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (30.3ms)
+Completed 200 OK in 105ms (Views: 66.1ms | ActiveRecord: 13.8ms)
+
+
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 23:14:51 -0300
+Processing by CampgroundsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zd3+0+RH6QR3ZUybUy58HU4ItLWp91d9BVSHmH00ncqW/DBhwPvFS3ae6FjnT2nMLy66ek/4NKtV0eLKbj421w==", "campground"=>{"name"=>"test2", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 8ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/campgrounds_controller.rb:31:in `create'
+Started PUT "/__web_console/repl_sessions/b83f72e44ac347bced7611cac979678f" for 127.0.0.1 at 2018-04-23 23:15:02 -0300
+Started PUT "/__web_console/repl_sessions/b83f72e44ac347bced7611cac979678f" for 127.0.0.1 at 2018-04-23 23:15:03 -0300
+  [1m[36mCampground Load (0.4ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" ORDER BY "campgrounds"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "campgrounds" SET "updated_at" = $1, "status" = $2 WHERE "campgrounds"."id" = $3[0m  [["updated_at", "2018-04-24 02:21:59.934841"], ["status", "t"], ["id", 108]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[33mCampground Store (16.8ms)[0m  {"id":108}
+  [1m[36mCampground Load (0.9ms)[0m  [1m[34mSELECT  "campgrounds".* FROM "campgrounds" ORDER BY "campgrounds"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/b83f72e44ac347bced7611cac979678f" for 127.0.0.1 at 2018-04-23 23:23:16 -0300
+Started PUT "/__web_console/repl_sessions/b83f72e44ac347bced7611cac979678f" for 127.0.0.1 at 2018-04-23 23:23:19 -0300
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/users/41/campgrounds" for 127.0.0.1 at 2018-04-23 23:26:15 -0300
+Processing by CampgroundsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zd3+0+RH6QR3ZUybUy58HU4ItLWp91d9BVSHmH00ncqW/DBhwPvFS3ae6FjnT2nMLy66ek/4NKtV0eLKbj421w==", "campground"=>{"name"=>"test2", "region"=>"", "direction"=>"", "photo"=>"", "photo1"=>"", "photo2"=>"", "photo3"=>"", "photo4"=>""}, "commit"=>"Create Campground", "user_id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "campgrounds" ("name", "direction", "region", "photo", "created_at", "updated_at", "photo1", "photo2", "photo3", "photo4", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "test2"], ["direction", ""], ["region", ""], ["photo", ""], ["created_at", "2018-04-24 02:26:16.014597"], ["updated_at", "2018-04-24 02:26:16.014597"], ["photo1", ""], ["photo2", ""], ["photo3", ""], ["photo4", ""], ["user_id", 41]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[33mCampground Store (12.4ms)[0m  {"id":109}
+Redirected to http://localhost:3000/
+Completed 302 Found in 78ms (Searchkick: 12.4ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-23 23:26:17 -0300
+Processing by CampgroundsController#landing as HTML
+  Rendering campgrounds/landing.html.erb within layouts/application
+  Rendered campgrounds/landing.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (6.1ms)
+Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/41/my_campgrounds" for 127.0.0.1 at 2018-04-23 23:26:20 -0300
+Processing by UsersController#my_campgrounds as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering users/my_campgrounds.html.erb within layouts/application
+  [1m[36mCampground Load (0.8ms)[0m  [1m[34mSELECT "campgrounds".* FROM "campgrounds" WHERE "campgrounds"."user_id" = 41[0m
+  Rendered users/my_campgrounds.html.erb within layouts/application (4.4ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 51ms (Views: 45.1ms | ActiveRecord: 1.3ms)
+
+
