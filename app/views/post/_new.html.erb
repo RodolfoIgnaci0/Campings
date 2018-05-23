@@ -1,0 +1,7 @@
+<%= form_with do |f| %>
+  <legend class="uk-legend">Comparte tu experiencia</legend>
+    <div class="uk-margin">
+      <%= f.text_area :opinion, class: "uk-textarea", placeholder:"Comparte tu experiencia", rows:5 %>
+    </div>
+    <%= f.submit class: "uk-button uk-button-secondary uk-button-large" %>
+<% end %>

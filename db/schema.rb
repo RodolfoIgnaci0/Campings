@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180417000101) do
+ActiveRecord::Schema.define(version: 20180523002038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,16 @@ ActiveRecord::Schema.define(version: 20180417000101) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
+  create_table "reservations", force: :cascade do |t|
+    t.date "initialDay"
+    t.date "finalDay"
+    t.boolean "payment", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "campground_id"
+    t.index ["campground_id"], name: "index_reservations_on_campground_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -64,4 +74,5 @@ ActiveRecord::Schema.define(version: 20180417000101) do
   add_foreign_key "campgrounds", "users"
   add_foreign_key "posts", "campgrounds"
   add_foreign_key "posts", "users"
+  add_foreign_key "reservations", "campgrounds"
 end

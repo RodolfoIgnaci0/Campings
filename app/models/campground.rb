@@ -1,5 +1,6 @@
 class Campground < ApplicationRecord
   has_many :posts
+  has_many :reservations
   belongs_to :user
   paginates_per 50
   searchkick word_middle: [:name, :region]

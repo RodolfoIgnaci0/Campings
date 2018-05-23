@@ -3,6 +3,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
 <div class="uk-container">
+  <% if signed_in? %>
+    <%= render 'reservation/new' %>
+  <% end %>
   <div class="uk-child-width-expand@s" uk-grid>
     <div class="uk-card uk-card-default uk-card-body">
       <h2><%= @campground.name %></h2>
@@ -11,12 +14,8 @@
       <p>Region: <%= @campground.region %></p>
       <p>Desde: <%= time_ago_in_words(@campground.created_at) %></p>
 
-      <%= form_with do |f| %>
-        <legend class="uk-legend">Comparte tu experiencia</legend>
-          <div class="uk-margin">
-            <%= f.text_area :opinion, class: "uk-textarea", placeholder:"Comparte tu experiencia", rows:5 %>
-          </div>
-          <%= f.submit class: "uk-button uk-button-secondary uk-button-large" %>
+      <% if signed_in? %>
+        <%= render 'post/new' %>
       <% end %>
     </div>
     <div class="uk-grid-item-match">

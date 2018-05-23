@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  initialDay: 2018-05-22
+  finalDay: 2018-05-22
+  campground_id: one
+  payment: false
+
+two:
+  initialDay: 2018-05-22
+  finalDay: 2018-05-22
+  campground_id: two
+  payment: false
