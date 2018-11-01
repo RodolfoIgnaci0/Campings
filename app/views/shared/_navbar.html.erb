@@ -1,8 +1,12 @@
 <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-right">
         <ul class="uk-navbar-nav">
-          <li class="uk-active"><%= link_to 'Home', root_path %></li>
-            <% if user_signed_in? %>
+          <% if user_signed_in? and current_user.role == 'admin' %>
+            <li class="uk-active"><%= link_to 'Home', admins_index_path %></li>
+            <% else %>
+            <li class="uk-active"><%= link_to 'Home', root_path %></li>
+            <% end %>
+          <% if user_signed_in? %>
             <li class="uk-parent">
               <a href="#">Options</a>
               <div class="uk-navbar-dropdown">

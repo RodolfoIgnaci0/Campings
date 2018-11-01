@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'admins/index'
+
   devise_for :users do
     resources :posts, only: [:index] #ver post del usuario especifico (active admin)
   end
