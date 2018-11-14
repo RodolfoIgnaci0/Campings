@@ -3,9 +3,9 @@
     <legend class="uk-legend">Fecha de Reserva</legend>
     <div class="uk-margin">
       <%= f.label :Desde %>
-      <%= f.date_select :initialDay, { :order => [:day, :month, :year], :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } }, {:class => "select birthday"} %>
+      <%= f.date_select :initialDay, { :order => [:day, :month, :year], :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } } %>
       <%= f.label :Hasta %>
-      <%= f.date_select :finalDay , { :order => [:day, :month, :year], :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } }, {:class => "select birthday"} %>
+      <%= f.date_select :finalDay , { :order => [:day, :month, :year], :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } } %>
     </div>
     <%= f.submit class: "uk-button uk-button-secondary uk-button-small" %>
   </div>

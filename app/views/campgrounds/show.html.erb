@@ -13,10 +13,6 @@
       <p>Dirección: <%= @campground.direction %></p>
       <p>Region: <%= @campground.region %></p>
       <p>Desde: <%= time_ago_in_words(@campground.created_at) %></p>
-
-      <% if signed_in? %>
-        <%= render 'post/new' %>
-      <% end %>
     </div>
     <div class="uk-grid-item-match">
       <div class="uk-card uk-card-default uk-card-body">
@@ -27,17 +23,5 @@
       </div>
     </div>
   </div>
+  <%= link_to "Comentar", new_campground_post_path(@campground.id), class:"uk-button uk-button-secondary" %>
 </div>
-
-<!-- <div class="uk-container">
-  <%= form_with do |f| %>
-  <legend class="uk-legend">Comparte tu experiencia</legend>
-  <div class="uk-margin">
-    <%= f.text_area :opinion, class: "uk-textarea", placeholder:"Comparte tu opinión", rows:5 %>
-  </div>
-  <%= f.submit class: "uk-button uk-button-secondary uk-button-large" %>
-  <% end %>
-</div>
-
-<h1>crear y mostrar comentarios del camping</h1>
-<h1>intentar comentarios con infinite scrolling</h1> -->

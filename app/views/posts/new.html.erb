@@ -1,0 +1,9 @@
+<div class="uk-container">
+  <%= form_with(model: [@campground,@post], local: true) do |f| %>
+    <legend class="uk-legend">Share your experience</legend>
+      <div class="uk-margin">
+        <%= f.text_area :opinion, class: "uk-textarea", placeholder:"Share your experience", rows:5 %>
+      </div>
+      <%= f.submit class: "uk-button uk-button-secondary uk-button-large" %>
+  <% end %>
+</div>

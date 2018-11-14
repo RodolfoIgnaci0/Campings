@@ -7,18 +7,35 @@ class CampgroundsController < ApplicationController
   end
   def show
   end
+
+  def create_post
+    @post = @campground.posts.new(post_params)
+    @post.user_id = current_user.id
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to root_path, notice: 'Comment was successfully created.' }
+        format.json { render :show, status: :created, location: @post }
+      else
+        format.html { render :new }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def edit
   end
 
   def index
     @searching = params[:search].present? ? params[:search]: nil
     @campgrounds = if @searching
-      searched = Campground.search(@searching)
-      searched.select{|x| x.status == true }
-    else
-      searched = Campground.where(status: true)
-      searched.page(params[:page]).per(5)
-    end
+                    #searched = Campground.search(@searching)
+                    #searched = searched.select{|x| x.status == true } #filtro todos los que tienen estado available
+                    searched = Campground.where(name: @searching, status: true)
+                    searched.page(params[:page]).per(5)
+                   else
+                    searched = Campground.where(status: true)
+                    searched.page(params[:page]).per(5)
+                   end
   end
 
   def new
@@ -60,5 +77,8 @@ end
   end
   def campground_params
     params.require(:campground).permit(:name, :direction, :region, :photo, :photo1, :photo2, :photo3, :photo4, :user_id)
+  end
+  def post_params
+      params.require(:post).permit(:opinion)
   end
 end
