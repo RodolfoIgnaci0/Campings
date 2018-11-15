@@ -6,6 +6,7 @@ class CampgroundsController < ApplicationController
   def landing
   end
   def show
+    @posts = Campground.comments
   end
 
   def create_post
@@ -27,15 +28,14 @@ class CampgroundsController < ApplicationController
 
   def index
     @searching = params[:search].present? ? params[:search]: nil
-    @campgrounds = if @searching
-                    #searched = Campground.search(@searching)
-                    #searched = searched.select{|x| x.status == true } #filtro todos los que tienen estado available
-                    searched = Campground.where(name: @searching, status: true)
-                    searched.page(params[:page]).per(5)
-                   else
-                    searched = Campground.where(status: true)
-                    searched.page(params[:page]).per(5)
-                   end
+    if @searching
+      #searched = Campground.search(@searching)
+      #searched = searched.select{|x| x.status == true } #filtro todos los que tienen estado available
+      searched = Campground.where(name: @searching, status: true)
+     else
+      searched = Campground.where(status: true)
+     end
+     @campgrounds = searched.page(params[:page]).per(5)
   end
 
   def new
