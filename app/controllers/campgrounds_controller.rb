@@ -6,7 +6,7 @@ class CampgroundsController < ApplicationController
   def landing
   end
   def show
-    @posts = Campground.comments
+    @posts = Post.where(campground_id: @campground.id)
   end
 
   def create_post
