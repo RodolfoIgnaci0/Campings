@@ -7,7 +7,7 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
   respond_to do |format|
    if @post.save
-     format.html { redirect_to root_path, notice: 'Comment was successfully created.' }
+     format.html { redirect_to @campground, notice: 'Comment was successfully created.' }
      format.json { render :show, status: :created, location: @post }
    else
      format.html { render :new }
