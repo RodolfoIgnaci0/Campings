@@ -5,13 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-#Post.destroy_all
-#Campground.destroy_all
-#User.destroy_all
-#
-#20.times do |x|
-#  User.create!(email: "correo#{x}@correo.com", created_at: "2018-04-10 23:46:12",name: "otro#{x}", last_name: "apellido#{x}", phone: 1234322, password:123456)
-#end
+
+Post.destroy_all
+Campground.destroy_all
+User.destroy_all
+User.create!(email: "admin@admin.com", created_at: "2018-04-10 23:46:12",name: "admin", last_name: "admin", phone: 1234322, password:123456,role: "admin")
+20.times do |x|
+  User.create!(email: "correo#{x}@correo.com", created_at: "2018-04-10 23:46:12",name: "otro#{x}", last_name: "apellido#{x}", phone: 1234322, password:123456)
+end
 
 100.times do |x|
   Campground.create!(name: Faker::StarWars.specie, direction: Faker::Address.street_address,user_id: rand(23..32), region: Faker::Address.state,
