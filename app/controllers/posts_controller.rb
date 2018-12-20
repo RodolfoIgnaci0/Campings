@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :find_user, only: [:create]
   before_action :find_campground, only: [:create,:new,:show]
+  before_action :authenticate_user!
 
   def create
     @post = @campground.posts.new(post_params)
@@ -27,10 +28,11 @@ class PostsController < ApplicationController
   def find_campground
     @campground = Campground.find(params[:campground_id])
   end
+
   def find_user
     @user = User.find(current_user.id)
   end
   def post_params
-      params.require(:post).permit(:opinion)
+    params.require(:post).permit(:opinion)
   end
 end

@@ -3,16 +3,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
 <div class="uk-container">
-  <% if signed_in? %>
-    <%= render 'reservation/new' %>
-  <% end %>
   <div class="uk-child-width-expand@s" uk-grid>
     <div class="uk-card uk-card-default uk-card-body">
       <h2><%= @campground.name %></h2>
       <%= image_tag @campground.photo %>
-      <p>Dirección: <%= @campground.direction %></p>
+      <p>Direction: <%= @campground.direction %></p>
       <p>Region: <%= @campground.region %></p>
-      <p>Desde: <%= time_ago_in_words(@campground.created_at) %></p>
+      <p>Since: <%= time_ago_in_words(@campground.created_at) %></p>
     </div>
     <div class="uk-grid-item-match">
       <div class="uk-card uk-card-default uk-card-body">
@@ -24,6 +21,7 @@
     </div>
   </div>
 
+  <h3>Comments:</h3>
   <% @posts.each do |p| %>
     <article class="uk-comment uk-comment-primary">
         <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
@@ -40,5 +38,8 @@
     </article>
     <% end %>
 
-  <%= link_to "Post", new_campground_post_path(@campground.id), class:"uk-button uk-button-secondary" %>
+  <% if signed_in? %>
+    <%= link_to "Reservation", new_campground_reservation_path(@campground.id), class:"uk-button uk-button-secondary" %>
+    <%= link_to "Share your experience", new_campground_post_path(@campground.id), class:"uk-button uk-button-secondary" %>
+  <% end %>
 </div>

@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   end
   resources :campgrounds, only: [:show, :index] do
     resources :posts, only: [:create,:new] #ver post del camping especifico (active admin)
+    resources :reservations, only: [:create, :new]
   end
 
   resources :users, only: [:index] do
     resources :campgrounds, only: [:edit,:update, :create, :new] do
-      resources :reservations, only: [:create, :new]
       patch :campground_status
     end
     member do

@@ -9,20 +9,6 @@ class CampgroundsController < ApplicationController
     @posts = Post.where(campground_id: @campground.id)
   end
 
-  def create_post
-    @post = @campground.posts.new(post_params)
-    @post.user_id = current_user.id
-    respond_to do |format|
-      if @post.save
-        format.html { redirect_to root_path, notice: 'Comment was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
-      else
-        format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
   def edit
   end
 

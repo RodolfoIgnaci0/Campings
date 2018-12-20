@@ -1,4 +1,4 @@
-<%= form_with url: user_campground_reservations_path(current_user.id, @campground.id) do |f| %>
+<%= form_with url: campground_reservations_path(@campground.id), method: :post do |f| %>
   <div class="uk-text-center">
     <legend class="uk-legend">Reservation Date</legend>
     <div class="uk-margin">
