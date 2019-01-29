@@ -18,6 +18,7 @@ gem 'devise'
 gem 'kaminari'
 gem 'searchkick'
 gem 'faker'
+gem 'byebug'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

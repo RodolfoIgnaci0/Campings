@@ -1,12 +1,18 @@
 class ReservationsController < ApplicationController
-  #before_action :reservation_params, only: [:create,:new]
-  before_action :set_campground, only: [:create,:new]
+  before_action :set_campground, only: [:create, :new]
 
   def create
-    @reservation = Reservation.new(reservation_params)
-    @reservation.campground_id = @campground.id
-    @reservation.save!
-    redirect_to root, notice: 'Reservation was successfully created.'
+    @reservation = @campground.reservations.new(reservation_params)
+    @reservation.user_id = current_user.id
+    respond_to do |format|
+      if @reservation.save
+        format.html { redirect_to @campground, notice: 'reservation was successfully created.' }
+        format.json { render :show, status: :created, location: @reservation }
+      else
+        format.html { render :new }
+        format.json { render json: @reservation.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def new
@@ -14,12 +20,10 @@ class ReservationsController < ApplicationController
   end
 
   private
-
-  def reservation_params
-    params.require(:reservation).permit(:initialDay, :finalDay)
-  end
-
   def set_campground
     @campground = Campground.find(params[:campground_id])
+  end
+  def reservation_params
+    params.require(:reservation).permit(:initialDay, :finalDay)
   end
 end

@@ -1,12 +1,12 @@
-<%= form_with url: campground_reservations_path(@campground.id), method: :post do |f| %>
+<legend class="uk-legend">Reservation Date</legend>
+<div class="uk-margin">
   <div class="uk-text-center">
-    <legend class="uk-legend">Reservation Date</legend>
-    <div class="uk-margin">
-      <%= f.label :Desde %>
-      <%= f.date_select :initialDay, { :order => [:day, :month, :year], :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } } %>
-      <%= f.label :Hasta %>
-      <%= f.date_select :finalDay , { :order => [:day, :month, :year], :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } } %>
+    <%= form_with model: [@campground, @reservation], local: true, method: :post do |f| %>
+        <%= f.label :Desde %>
+        <%= f.date_select :initialDay %>
+        <%= f.label :Hasta %>
+        <%= f.date_select :finalDay %>
+        <%= f.submit class: "uk-button uk-button-secondary uk-button-small" %>
     </div>
-    <%= f.submit class: "uk-button uk-button-secondary uk-button-small" %>
   </div>
 <% end %>
