@@ -41,13 +41,13 @@ class CampgroundsController < ApplicationController
     else
       @campground.update(status: true)
     end
-    redirect_to my_campgrounds_user_path(current_user,@campground.id)
+    redirect_to admins_index_path
   end
 
   def update
     respond_to do |format|
       if @campground.update(campground_params)
-        format.html { redirect_to my_campgrounds_user_path(current_user), notice: 'Campground was successfully updated.' }
+        format.html { redirect_to admins_index_path, notice: 'Campground was successfully updated.' }
       else
         format.html { render :edit }
       end

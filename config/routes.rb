@@ -13,9 +13,6 @@ Rails.application.routes.draw do
     resources :campgrounds, only: [:edit,:update, :create, :new] do
       patch :campground_status
     end
-    member do
-      get :my_campgrounds
-    end
   end
 
 
