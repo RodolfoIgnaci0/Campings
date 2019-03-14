@@ -35,6 +35,10 @@
         <%= f.file_field :photo4, class:"uk-button uk-button-default"%>
       </div>
       <div class="uk-margin">
+        <%= f.label :capability %>
+        <%= f.number_field :capability %>
+      </div>
+      <div class="uk-margin">
         <%= f.submit class:"uk-button uk-button-secondary" %>
       </div>
     <% end %>

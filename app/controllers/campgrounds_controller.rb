@@ -62,7 +62,7 @@ class CampgroundsController < ApplicationController
     @campground = Campground.find(params[:campground_id])
   end
   def campground_params
-    params.require(:campground).permit(:name, :direction, :region, :photo, :photo1, :photo2, :photo3, :photo4, :user_id)
+    params.require(:campground).permit(:name, :direction, :region, :photo, :photo1, :photo2, :photo3, :photo4, :user_id, :capability)
   end
   def post_params
     params.require(:post).permit(:opinion)
