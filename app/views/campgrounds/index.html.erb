@@ -24,9 +24,10 @@
       </div>
       <div>
         <div class="uk-card-body">
-          <h3 class="uk-card-title"><%= value.name %></h3>
-          <p>Region: <%= value.region %></p>
-          <p>Dirección: <%= value.direction %></p>
+          <span>
+            <h3 class="uk-card-title"><%= value.name %> </h3>
+            <p> <%= value.region %> </p>
+          </span>
           <%= link_to "See Offer", campground_path(value), class: "uk-button uk-button-secondary uk-button-large" %>
         </div>
       </div>

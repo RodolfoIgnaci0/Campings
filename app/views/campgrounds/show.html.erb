@@ -7,8 +7,9 @@
     <div class="uk-card uk-card-default uk-card-body">
       <h2><%= @campground.name %></h2>
       <%= image_tag @campground.photo %>
-      <p>Direction: <%= @campground.direction %></p>
       <p>Region: <%= @campground.region %></p>
+      <p>Direction: <%= @campground.direction %></p>
+      <p>Email: <%= @campground.user.email %> </p>
       <p>Since: <%= time_ago_in_words(@campground.created_at) %></p>
     </div>
     <div class="uk-grid-item-match">

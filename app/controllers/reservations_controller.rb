@@ -1,5 +1,6 @@
 class ReservationsController < ApplicationController
   before_action :set_campground, only: [:create, :new]
+  before_action :authenticate_user!
 
   def create
     @reservation = @campground.reservations.new(reservation_params)

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users do
     resources :posts, only: [:index] #ver post del usuario especifico (active admin)
   end
-  resources :campgrounds, only: [:show, :index] do
+  resources :campgrounds, only: [:show] do
     resources :posts, only: [:create,:new] #ver post del camping especifico (active admin)
     resources :reservations, only: [:create, :new]
   end
@@ -14,6 +14,12 @@ Rails.application.routes.draw do
       patch :campground_status
     end
   end
+
+  concern :paginatable do
+    get '(campgrounds/:page)', action: :index, on: :collection
+  end
+
+  resources :campgrounds, concerns: :paginatable
 
 
   get 'campgrounds/landing'
